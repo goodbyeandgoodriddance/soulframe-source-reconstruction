@@ -1,0 +1,2984 @@
+-- Soulframe disassembly: SF/Scripts/Prototypes/NightfoldVendorStation.lua
+-- normalized version=6/3; 24 prototypes; main=p23
+-- NOTE: this is a bytecode listing, not Luau source. The source-form
+--       decompiler could not structure one or more prototypes into
+--       legal Luau. Failing prototypes: [3]
+
+-- resolved atoms referenced in this script: 104/142
+
+-- ============================================================
+function p0  stack=4 params=1 upvalues=1 varargs=0 flags=0 line=109
+  -- constants (7):
+  --   K[  0] atom           = atom(5f71328d = ShouldForceInteractDisable)
+  --   K[  1] atom           = atom(de89c50a = WeakResource)
+  --   K[  2] import         = import(const#1)
+  --   K[  3] atom           = atom(860b110e = vendorAncestorRes)
+  --   K[  4] import         = import(const#3)
+  --   K[  5] atom           = atom(c8f4d8f6 = Disable)
+  --   K[  6] atom           = atom(6266f538 = Enable)
+  L  110     0  GETUPVAL       R2, R0
+  L  110     1  GETTABLEKS     R1, R2, atom(5f71328d = ShouldForceInteractDisable)
+  L  110     3  GETIMPORT      R2 = import_cache(d=2) chain=import(const#1) aux=0x40100000
+  L  110     5  GETIMPORT      R3 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  110     7  CALL           R2, R2, R0
+  L  110     8  CALL           R1, R0, R2
+  L  110     9  JUMPIFNOT      R1, pc=14
+  L  111    10  NAMECALL       R1, R0, atom(c8f4d8f6 = Disable)
+  L  110    12  CALL           R1, R2, R1
+  L  111    13  RETURN         R0, R1, R0
+  L  112    14  NAMECALL       R1, R0, atom(6266f538 = Enable)
+  L  110    16  CALL           R1, R2, R1
+  L  111    17  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p1  stack=6 params=2 upvalues=2 varargs=0 flags=0 line=117
+  -- constants (9):
+  --   K[  0] atom           = atom(528b52cb = ShouldForceHideAncestor)
+  --   K[  1] atom           = atom(de89c50a = WeakResource)
+  --   K[  2] import         = import(const#1)
+  --   K[  3] atom           = atom(860b110e = vendorAncestorRes)
+  --   K[  4] import         = import(const#3)
+  --   K[  5] atom           = atom(6ead47ac = SetVisibility)
+  --   K[  6] atom           = atom(d30cffc0)
+  --   K[  7] atom           = atom(68f2c268)
+  --   K[  8] atom           = atom(48fa6bc4)
+  L  118     0  GETUPVAL       R3, R0
+  L  118     1  GETTABLEKS     R2, R3, atom(528b52cb = ShouldForceHideAncestor)
+  L  118     3  GETIMPORT      R3 = import_cache(d=2) chain=import(const#1) aux=0x40100000
+  L  118     5  GETIMPORT      R4 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  118     7  CALL           R3, R2, R0
+  L  118     8  CALL           R2, R0, R2
+  L  118     9  JUMPIFNOT      R2, pc=20
+  L  119    10  LOADB          R4 = False
+  L  118    11  LOADB          R5 = False
+  L  118    12  NAMECALL       R2, R0, atom(6ead47ac = SetVisibility)
+  L  118    14  CALL           R2, R4, R1
+  L  119    15  GETUPVAL       R2, R1
+  L  118    16  NAMECALL       R2, R2, atom(d30cffc0)
+  L  118    18  CALL           R2, R2, R1
+  L  119    19  RETURN         R0, R1, R0
+  L  120    20  MOVE           R4, R1
+  L  118    21  NAMECALL       R2, R0, atom(68f2c268)
+  L  118    23  CALL           R2, R3, R1
+  L  119    24  LOADB          R4 = True
+  L  118    25  LOADB          R5 = True
+  L  118    26  NAMECALL       R2, R0, atom(6ead47ac = SetVisibility)
+  L  118    28  CALL           R2, R4, R1
+  L  119    29  GETUPVAL       R2, R1
+  L  118    30  NAMECALL       R2, R2, atom(48fa6bc4)
+  L  118    32  CALL           R2, R2, R1
+  L  119    33  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p2  stack=6 params=0 upvalues=0 varargs=0 flags=0 line=128
+  -- constants (7):
+  --   K[  0] atom           = atom(f0bf8ede = _T)
+  --   K[  1] string_ref     = str_ref(#1)
+  --   K[  2] import         = import(const#0.const#1)
+  --   K[  3] atom           = atom(7e8ad928)
+  --   K[  4] import         = import(const#3)
+  --   K[  5] atom           = atom(c0ec49e8 = vendorStationDecoInstance)
+  --   K[  6] import         = import(const#5)
+  L  129     0  GETIMPORT      R1 = import_cache(d=2) chain=import(const#0.const#1) aux=0x80000400
+  L  129     2  FASTCALL1      R90, R1, R2
+  L  129     3  GETIMPORT      R0 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  129     5  CALL           R0, R2, R2
+  L  129     6  JUMPIF         R0, pc=27
+  L  129     7  GETIMPORT      R1 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  129     9  FASTCALL1      R90, R1, R2
+  L  129    10  GETIMPORT      R0 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  129    12  CALL           R0, R2, R2
+  L  129    13  JUMPIF         R0, pc=27
+  L  130    14  GETIMPORT      R0 = import_cache(d=2) chain=import(const#0.const#1) aux=0x80000400
+  L  129    16  LOADNIL        R1
+  L  129    17  LOADNIL        R2
+  L  129    18  FORGPREP       R0, pc=25
+  L  130    19  GETIMPORT      R5 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  129    21  JUMPIFNOTEQ    R4, R5, pc=25
+  L  130    23  LOADB          R5 = True
+  L  129    24  RETURN         R5, R2, R0
+  L  383    25  FORGLOOP       R0, pc=19, aux=0x00000002
+  L  135    27  LOADB          R0 = False
+  L  129    28  RETURN         R0, R2, R0
+end
+
+-- ============================================================
+function p3  stack=8 params=1 upvalues=0 varargs=0 flags=0 line=139  (DECOMPILER FAILURE)
+  -- constants (13):
+  --   K[  0] atom           = atom(f0bf8ede = _T)
+  --   K[  1] string_ref     = str_ref(#1)
+  --   K[  2] import         = import(const#0.const#1)
+  --   K[  3] atom           = atom(7e8ad928)
+  --   K[  4] import         = import(const#3)
+  --   K[  5] import         = import(const#0)
+  --   K[  6] atom           = atom(c0ec49e8 = vendorStationDecoInstance)
+  --   K[  7] import         = import(const#6)
+  --   K[  8] atom           = atom(01f4de21 = table)
+  --   K[  9] atom           = atom(e4db1959 = insert)
+  --   K[ 10] import         = import(const#8.const#9)
+  --   K[ 11] atom           = atom(d4e1b06a = remove)
+  --   K[ 12] import         = import(const#8.const#11)
+  L  140     0  GETIMPORT      R2 = import_cache(d=2) chain=import(const#0.const#1) aux=0x80000400
+  L  129     2  FASTCALL1      R90, R2, R2
+  L  129     3  GETIMPORT      R1 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  129     5  CALL           R1, R2, R2
+  L  129     6  JUMPIFNOT      R1, pc=13
+  L  130     7  GETIMPORT      R1 = import_cache(d=5) chain=import(const#0) aux=0x40000000
+  L  129     9  NEWTABLE       R2, arraysz_hint=0, hashsz_log2=0, aux=0
+  L  129    11  SETTABLEKS     R2, R1, str_ref(#1)
+  L  131    13  GETIMPORT      R2 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  129    15  FASTCALL1      R90, R2, R2
+  L  129    16  GETIMPORT      R1 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  129    18  CALL           R1, R2, R2
+  L  129    19  JUMPIF         R1, pc=81
+  L  371    20  GETIMPORT      R3 = import_cache(d=2) chain=import(const#0.const#1) aux=0x80000400
+  L  129    22  FASTCALL1      R90, R3, R2
+  L  129    23  GETIMPORT      R2 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  129    25  CALL           R2, R2, R2
+  L  129    26  JUMPIF         R2, pc=47
+  L  129    27  GETIMPORT      R3 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  129    29  FASTCALL1      R90, R3, R2
+  L  129    30  GETIMPORT      R2 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  129    32  CALL           R2, R2, R2
+  L  129    33  JUMPIF         R2, pc=47
+  L  130    34  GETIMPORT      R2 = import_cache(d=2) chain=import(const#0.const#1) aux=0x80000400
+  L  129    36  LOADNIL        R3
+  L  129    37  LOADNIL        R4
+  L  129    38  FORGPREP       R2, pc=45
+  L  130    39  GETIMPORT      R7 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  129    41  JUMPIFNOTEQ    R6, R7, pc=45
+  L  130    43  LOADB          R1 = True
+  L  129    44  JUMP           pc=48
+  L  383    45  FORGLOOP       R2, pc=39, aux=0x00000002
+  L  135    47  LOADB          R1 = False
+  L  129    48  JUMPIF         R1, pc=60
+  L  129    49  JUMPIFNOT      R0, pc=60
+  L  138    50  GETIMPORT      R2 = import_cache(d=2) chain=import(const#0.const#1) aux=0x80000400
+  L  129    52  GETIMPORT      R3 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  129    54  FASTCALL2      builtin=52, R2, +3, aux=0x00000003
+  L  129    56  GETIMPORT      R1 = import_cache(d=10) chain=import(const#8.const#9) aux=0x80802400
+  L  129    58  CALL           R1, R3, R1
+  L  129    59  RETURN         R0, R1, R0
+  L  130    60  JUMPIF         R0, pc=81
+  L  130    61  GETIMPORT      R4 = import_cache(d=2) chain=import(const#0.const#1) aux=0x80000400
+  L  129    63  LENGTH         R3, R4
+  L  129    64  LOADN          R1 = 1
+  L  129    65  LOADN          R2 = -1
+  L  129    66  FORNPREP       R1, pc=81
+  L  130    67  GETIMPORT      R5 = import_cache(d=2) chain=import(const#0.const#1) aux=0x80000400
+  L  129    69  GETTABLE       R4, R5, R3
+  L  129    70  GETIMPORT      R5 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  129    72  JUMPIFNOTEQ    R4, R5, pc=80
+  L  130    74  GETIMPORT      R4 = import_cache(d=12) chain=import(const#8.const#11) aux=0x80802c00
+  L  129    76  GETIMPORT      R5 = import_cache(d=2) chain=import(const#0.const#1) aux=0x80000400
+  L  129    78  MOVE           R6, R3
+  L  129    79  CALL           R4, R3, R1
+  L  383    80  FORNLOOP       R1, pc=67
+  L  136    81  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p4  stack=6 params=0 upvalues=1 varargs=0 flags=0 line=156
+  -- constants (4):
+  --   K[  0] atom           = atom(a470273d = RemoveSparrowDestination)
+  --   K[  1] string_ref     = str_ref(#2)
+  --   K[  2] atom           = atom(e7c161a0 = tostring)
+  --   K[  3] import         = import(const#2)
+  L  158     0  GETUPVAL       R1, R0
+  L  158     1  GETTABLEKS     R0, R1, atom(a470273d = RemoveSparrowDestination)
+  L  158     3  LOADNIL        R1
+  L  158     4  LOADK          R3 = K[1] = str_ref(#2)
+  L  158     5  LOADN          R5 = 1
+  L  158     6  FASTCALL1      R63, R5, R2
+  L  158     7  GETIMPORT      R4 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L  158     9  CALL           R4, R2, R2
+  L  158    10  CONCAT         R2, R3, R4
+  L  158    11  CALL           R0, R3, R1
+  L  158    12  GETUPVAL       R1, R0
+  L  158    13  GETTABLEKS     R0, R1, atom(a470273d = RemoveSparrowDestination)
+  L  158    15  LOADNIL        R1
+  L  158    16  LOADK          R3 = K[1] = str_ref(#2)
+  L  158    17  LOADN          R5 = 2
+  L  158    18  FASTCALL1      R63, R5, R2
+  L  158    19  GETIMPORT      R4 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L  158    21  CALL           R4, R2, R2
+  L  158    22  CONCAT         R2, R3, R4
+  L  158    23  CALL           R0, R3, R1
+  L  158    24  GETUPVAL       R1, R0
+  L  158    25  GETTABLEKS     R0, R1, atom(a470273d = RemoveSparrowDestination)
+  L  158    27  LOADNIL        R1
+  L  158    28  LOADK          R3 = K[1] = str_ref(#2)
+  L  158    29  LOADN          R5 = 3
+  L  158    30  FASTCALL1      R63, R5, R2
+  L  158    31  GETIMPORT      R4 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L  158    33  CALL           R4, R2, R2
+  L  158    34  CONCAT         R2, R3, R4
+  L  158    35  CALL           R0, R3, R1
+  L  160    36  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p5  stack=12 params=0 upvalues=6 varargs=0 flags=0 line=163
+  -- constants (27):
+  --   K[  0] atom           = atom(ae3ffccd = gRegion)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(f7b52061 = ancestorDecoTag)
+  --   K[  3] import         = import(const#2)
+  --   K[  4] atom           = atom(0a6a5887)
+  --   K[  5] atom           = atom(4d787c92 = hidDecoPosTag)
+  --   K[  6] import         = import(const#5)
+  --   K[  7] number         = num(0.0)
+  --   K[  8] atom           = atom(3c8cb70f = vendorLightTag)
+  --   K[  9] import         = import(const#8)
+  --   K[ 10] atom           = atom(2226b35c)
+  --   K[ 11] atom           = atom(0ae54f4d = vendorFxTag)
+  --   K[ 12] import         = import(const#11)
+  --   K[ 13] atom           = atom(899888e5 = vendorDecoKinematicTag)
+  --   K[ 14] import         = import(const#13)
+  --   K[ 15] atom           = atom(9afba2d5 = GetPosition)
+  --   K[ 16] atom           = atom(957e53a2 = Vector)
+  --   K[ 17] import         = import(const#16)
+  --   K[ 18] string_ref     = str_ref(#3)
+  --   K[ 19] string_ref     = str_ref(#4)
+  --   K[ 20] string_ref     = str_ref(#5)
+  --   K[ 21] atom           = atom(18331ff8 = SetPosition)
+  --   K[ 22] atom           = atom(6ead47ac = SetVisibility)
+  --   K[ 23] atom           = atom(dd652880 = TurnOff)
+  --   K[ 24] atom           = atom(c8f4d8f6 = Disable)
+  --   K[ 25] atom           = atom(7e8ad928)
+  --   K[ 26] import         = import(const#25)
+  L  164     0  GETIMPORT      R0 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  164     2  GETIMPORT      R2 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L  164     4  NAMECALL       R0, R0, atom(0a6a5887)
+  L  164     6  CALL           R0, R3, R2
+  L  164     7  SETUPVAL       R0, R0
+  L  165     8  GETIMPORT      R0 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  164    10  GETIMPORT      R2 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  164    12  NAMECALL       R0, R0, atom(0a6a5887)
+  L  164    14  CALL           R0, R3, R2
+  L  166    15  GETUPVAL       R2, R1
+  L  164    16  LENGTH         R1, R2
+  L  164    17  JUMPXEQKN      R1, pc=27, k=num(0.0), not=True
+  L  165    19  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  164    21  GETIMPORT      R3 = import_cache(d=9) chain=import(const#8) aux=0x40800000
+  L  164    23  NAMECALL       R1, R1, atom(2226b35c)
+  L  164    25  CALL           R1, R3, R2
+  L  164    26  SETUPVAL       R1, R1
+  L  167    27  GETUPVAL       R2, R2
+  L  164    28  LENGTH         R1, R2
+  L  164    29  JUMPXEQKN      R1, pc=39, k=num(0.0), not=True
+  L  165    31  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  164    33  GETIMPORT      R3 = import_cache(d=12) chain=import(const#11) aux=0x40b00000
+  L  164    35  NAMECALL       R1, R1, atom(2226b35c)
+  L  164    37  CALL           R1, R3, R2
+  L  164    38  SETUPVAL       R1, R2
+  L  167    39  GETUPVAL       R2, R3
+  L  164    40  LENGTH         R1, R2
+  L  164    41  JUMPXEQKN      R1, pc=51, k=num(0.0), not=True
+  L  165    43  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  164    45  GETIMPORT      R3 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L  164    47  NAMECALL       R1, R1, atom(2226b35c)
+  L  164    49  CALL           R1, R3, R2
+  L  164    50  SETUPVAL       R1, R3
+  L  168    51  LOADN          R3 = 1
+  L  164    52  GETUPVAL       R4, R3
+  L  164    53  LENGTH         R1, R4
+  L  164    54  LOADN          R2 = 1
+  L  164    55  FORNPREP       R1, pc=99
+  L  166    56  GETUPVAL       R4, R4
+  L  164    57  GETUPVAL       R6, R3
+  L  164    58  GETTABLE       R5, R6, R3
+  L  164    59  GETUPVAL       R7, R3
+  L  164    60  GETTABLE       R6, R7, R3
+  L  164    61  NAMECALL       R6, R6, atom(9afba2d5 = GetPosition)
+  L  164    63  CALL           R6, R2, R2
+  L  164    64  SETTABLE       R6, R4, R5
+  L  166    65  GETUPVAL       R5, R3
+  L  164    66  GETTABLE       R4, R5, R3
+  L  164    67  GETIMPORT      R6 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L  164    69  GETUPVAL       R9, R3
+  L  164    70  GETTABLE       R8, R9, R3
+  L  164    71  NAMECALL       R8, R8, atom(9afba2d5 = GetPosition)
+  L  164    73  CALL           R8, R2, R2
+  L  164    74  GETTABLEKS     R7, R8, str_ref(#3)
+  L  164    76  NAMECALL       R9, R0, atom(9afba2d5 = GetPosition)
+  L  164    78  CALL           R9, R2, R2
+  L  164    79  GETTABLEKS     R8, R9, str_ref(#4)
+  L  164    81  GETUPVAL       R11, R3
+  L  164    82  GETTABLE       R10, R11, R3
+  L  164    83  NAMECALL       R10, R10, atom(9afba2d5 = GetPosition)
+  L  164    85  CALL           R10, R2, R2
+  L  164    86  GETTABLEKS     R9, R10, str_ref(#5)
+  L  164    88  CALL           R6, R4, R0
+  L  164    89  NAMECALL       R4, R4, atom(18331ff8 = SetPosition)
+  L  164    91  CALL           R4, R0, R1
+  L  165    92  GETUPVAL       R5, R3
+  L  164    93  GETTABLE       R4, R5, R3
+  L  164    94  LOADB          R6 = False
+  L  164    95  NAMECALL       R4, R4, atom(6ead47ac = SetVisibility)
+  L  164    97  CALL           R4, R3, R1
+  L  415    98  FORNLOOP       R1, pc=56
+  L  172    99  LOADN          R3 = 1
+  L  164   100  GETUPVAL       R4, R1
+  L  164   101  LENGTH         R1, R4
+  L  164   102  LOADN          R2 = 1
+  L  164   103  FORNPREP       R1, pc=110
+  L  165   104  GETUPVAL       R5, R1
+  L  164   105  GETTABLE       R4, R5, R3
+  L  164   106  NAMECALL       R4, R4, atom(dd652880 = TurnOff)
+  L  164   108  CALL           R4, R2, R1
+  L  419   109  FORNLOOP       R1, pc=104
+  L  168   110  LOADN          R3 = 1
+  L  164   111  GETUPVAL       R4, R2
+  L  164   112  LENGTH         R1, R4
+  L  164   113  LOADN          R2 = 1
+  L  164   114  FORNPREP       R1, pc=121
+  L  165   115  GETUPVAL       R5, R2
+  L  164   116  GETTABLE       R4, R5, R3
+  L  164   117  NAMECALL       R4, R4, atom(c8f4d8f6 = Disable)
+  L  164   119  CALL           R4, R2, R1
+  L  419   120  FORNLOOP       R1, pc=115
+  L  168   121  GETUPVAL       R2, R0
+  L  164   122  FASTCALL1      R90, R2, R2
+  L  164   123  GETIMPORT      R1 = import_cache(d=26) chain=import(const#25) aux=0x41900000
+  L  164   125  CALL           R1, R2, R2
+  L  164   126  JUMPIF         R1, pc=133
+  L  165   127  GETUPVAL       R1, R0
+  L  164   128  LOADB          R3 = False
+  L  164   129  LOADB          R4 = False
+  L  164   130  NAMECALL       R1, R1, atom(6ead47ac = SetVisibility)
+  L  164   132  CALL           R1, R4, R1
+  L  167   133  GETUPVAL       R1, R5
+  L  164   134  LOADB          R2 = False
+  L  164   135  CALL           R1, R2, R1
+  L  165   136  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p6  stack=11 params=0 upvalues=2 varargs=0 flags=0 line=203
+  -- constants (32):
+  --   K[  0] atom           = atom(75c6cac9 = lookAtRevealTrigger)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(7e8ad928)
+  --   K[  3] import         = import(const#2)
+  --   K[  4] atom           = atom(6266f538 = Enable)
+  --   K[  5] atom           = atom(ae3ffccd = gRegion)
+  --   K[  6] import         = import(const#5)
+  --   K[  7] atom           = atom(8659e708 = Symbol)
+  --   K[  8] import         = import(const#7)
+  --   K[  9] string_ref     = str_ref(#6)
+  --   K[ 10] atom           = atom(9afba2d5 = GetPosition)
+  --   K[ 11] atom           = atom(f738b4af)
+  --   K[ 12] atom           = atom(648955ed = rippleVFX)
+  --   K[ 13] import         = import(const#12)
+  --   K[ 14] atom           = atom(dc309f8a)
+  --   K[ 15] atom           = atom(5c662505 = CreateEntity)
+  --   K[ 16] atom           = atom(bfc20c13 = showSparrow)
+  --   K[ 17] import         = import(const#16)
+  --   K[ 18] atom           = atom(a470273d = RemoveSparrowDestination)
+  --   K[ 19] string_ref     = str_ref(#2)
+  --   K[ 20] atom           = atom(e7c161a0 = tostring)
+  --   K[ 21] import         = import(const#20)
+  --   K[ 22] atom           = atom(46dbfc73 = AddSparrowDestination)
+  --   K[ 23] string_ref     = str_ref(#7)
+  --   K[ 24] number         = num(1.0)
+  --   K[ 25] string_ref     = str_ref(#8)
+  --   K[ 26] string_ref     = str_ref(#9)
+  --   K[ 27] atom           = atom(5f4e6e78 = Range)
+  --   K[ 28] import         = import(const#27)
+  --   K[ 29] atom           = atom(f0bf8ede = _T)
+  --   K[ 30] import         = import(const#29)
+  --   K[ 31] string_ref     = str_ref(#10)
+  L  204     0  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  158     2  FASTCALL1      R90, R1, R2
+  L  158     3  GETIMPORT      R0 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L  158     5  CALL           R0, R2, R2
+  L  158     6  JUMPIF         R0, pc=137
+  L  159     7  GETIMPORT      R0 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  158     9  NAMECALL       R0, R0, atom(6266f538 = Enable)
+  L  158    11  CALL           R0, R2, R1
+  L  159    12  GETIMPORT      R0 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  158    14  GETIMPORT      R2 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L  158    16  LOADK          R3 = K[9] = str_ref(#6)
+  L  158    17  CALL           R2, R2, R2
+  L  158    18  GETIMPORT      R3 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  158    20  NAMECALL       R3, R3, atom(9afba2d5 = GetPosition)
+  L  158    22  CALL           R3, R2, R2
+  L  158    23  LOADN          R4 = 0
+  L  158    24  LOADN          R5 = 5
+  L  158    25  NAMECALL       R0, R0, atom(f738b4af)
+  L  158    27  CALL           R0, R6, R2
+  L  159    28  FASTCALL1      R90, R0, R3
+  L  158    29  MOVE           R2, R0
+  L  158    30  GETIMPORT      R1 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L  158    32  CALL           R1, R2, R2
+  L  158    33  JUMPIFNOT      R1, pc=51
+  L  159    34  GETIMPORT      R1 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  158    36  GETIMPORT      R3 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L  158    38  GETIMPORT      R4 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  158    40  NAMECALL       R4, R4, atom(9afba2d5 = GetPosition)
+  L  158    42  CALL           R4, R2, R2
+  L  158    43  GETIMPORT      R5 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  158    45  NAMECALL       R5, R5, atom(dc309f8a)
+  L  158    47  CALL           R5, R2, R0
+  L  158    48  NAMECALL       R1, R1, atom(5c662505 = CreateEntity)
+  L  158    50  CALL           R1, R0, R1
+  L  160    51  GETIMPORT      R1 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L  158    53  JUMPIFNOT      R1, pc=137
+  L  159    54  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  159    56  GETIMPORT      R2 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  158    58  GETUPVAL       R4, R0
+  L  158    59  GETIMPORT      R5 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  158    61  NAMECALL       R5, R5, atom(9afba2d5 = GetPosition)
+  L  158    63  CALL           R5, R2, R2
+  L  158    64  LOADN          R6 = 0
+  L  158    65  LOADN          R7 = 10
+  L  158    66  NAMECALL       R2, R2, atom(f738b4af)
+  L  158    68  CALL           R2, R6, R2
+  L  159    69  FASTCALL1      R90, R2, R3
+  L  158    70  MOVE           R4, R2
+  L  158    71  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L  158    73  CALL           R3, R2, R2
+  L  158    74  JUMPIF         R3, pc=76
+  L  159    75  MOVE           R1, R2
+  L  358    76  GETUPVAL       R4, R1
+  L  158    77  GETTABLEKS     R3, R4, atom(a470273d = RemoveSparrowDestination)
+  L  158    79  LOADNIL        R4
+  L  158    80  LOADK          R6 = K[19] = str_ref(#2)
+  L  158    81  LOADN          R8 = 1
+  L  158    82  FASTCALL1      R63, R8, R2
+  L  158    83  GETIMPORT      R7 = import_cache(d=21) chain=import(const#20) aux=0x41400000
+  L  158    85  CALL           R7, R2, R2
+  L  158    86  CONCAT         R5, R6, R7
+  L  158    87  CALL           R3, R3, R1
+  L  158    88  GETUPVAL       R4, R1
+  L  158    89  GETTABLEKS     R3, R4, atom(a470273d = RemoveSparrowDestination)
+  L  158    91  LOADNIL        R4
+  L  158    92  LOADK          R6 = K[19] = str_ref(#2)
+  L  158    93  LOADN          R8 = 2
+  L  158    94  FASTCALL1      R63, R8, R2
+  L  158    95  GETIMPORT      R7 = import_cache(d=21) chain=import(const#20) aux=0x41400000
+  L  158    97  CALL           R7, R2, R2
+  L  158    98  CONCAT         R5, R6, R7
+  L  158    99  CALL           R3, R3, R1
+  L  158   100  GETUPVAL       R4, R1
+  L  158   101  GETTABLEKS     R3, R4, atom(a470273d = RemoveSparrowDestination)
+  L  158   103  LOADNIL        R4
+  L  158   104  LOADK          R6 = K[19] = str_ref(#2)
+  L  158   105  LOADN          R8 = 3
+  L  158   106  FASTCALL1      R63, R8, R2
+  L  158   107  GETIMPORT      R7 = import_cache(d=21) chain=import(const#20) aux=0x41400000
+  L  158   109  CALL           R7, R2, R2
+  L  158   110  CONCAT         R5, R6, R7
+  L  158   111  CALL           R3, R3, R1
+  L  218   112  GETUPVAL       R4, R1
+  L  158   113  GETTABLEKS     R3, R4, atom(46dbfc73 = AddSparrowDestination)
+  L  158   115  MOVE           R4, R1
+  L  158   116  LOADNIL        R5
+  L  158   117  LOADK          R7 = K[19] = str_ref(#2)
+  L  158   118  LOADK          R8 = K[23] = str_ref(#7)
+  L  158   119  CONCAT         R6, R7, R8
+  L  158   120  GETUPVAL       R10, R1
+  L  158   121  GETTABLEKS     R9, R10, str_ref(#8)
+  L  158   123  GETTABLEKS     R8, R9, str_ref(#9)
+  L  158   125  ADDK           R7, R8, num(1.0)
+  L  158   126  GETIMPORT      R8 = import_cache(d=28) chain=import(const#27) aux=0x41b00000
+  L  158   128  LOADN          R9 = 0
+  L  158   129  LOADN          R10 = 100
+  L  158   130  CALL           R8, R3, R0
+  L  158   131  CALL           R3, R0, R1
+  L  159   132  GETIMPORT      R3 = import_cache(d=30) chain=import(const#29) aux=0x41d00000
+  L  158   134  LOADB          R4 = True
+  L  158   135  SETTABLEKS     R4, R3, str_ref(#10)
+  L  161   137  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p7  stack=7 params=1 upvalues=6 varargs=0 flags=0 line=224
+  -- constants (39):
+  --   K[  0] atom           = atom(7e8ad928)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(6ead47ac = SetVisibility)
+  --   K[  3] atom           = atom(d30cffc0)
+  --   K[  4] atom           = atom(130cd421 = useAltStartingPos)
+  --   K[  5] import         = import(const#4)
+  --   K[  6] atom           = atom(ae3ffccd = gRegion)
+  --   K[  7] import         = import(const#6)
+  --   K[  8] atom           = atom(8860b0d6 = altStartPositionTag)
+  --   K[  9] import         = import(const#8)
+  --   K[ 10] atom           = atom(0a6a5887)
+  --   K[ 11] atom           = atom(9afba2d5 = GetPosition)
+  --   K[ 12] atom           = atom(dc309f8a)
+  --   K[ 13] atom           = atom(cd866e6b = Teleport)
+  --   K[ 14] atom           = atom(839dbdde = heirloomDecoTag)
+  --   K[ 15] import         = import(const#14)
+  --   K[ 16] atom           = atom(c0ec49e8 = vendorStationDecoInstance)
+  --   K[ 17] import         = import(const#16)
+  --   K[ 18] atom           = atom(eeec3594 = vendorHiddenDecoAnim)
+  --   K[ 19] import         = import(const#18)
+  --   K[ 20] atom           = atom(7b7015c9)
+  --   K[ 21] atom           = atom(921c1a5f)
+  --   K[ 22] atom           = atom(be0bea4a)
+  --   K[ 23] atom           = atom(9114842a = vendorHiddenDecos)
+  --   K[ 24] atom           = atom(f0bf8ede = _T)
+  --   K[ 25] import         = import(const#24)
+  --   K[ 26] string_ref     = str_ref(#11)
+  --   K[ 27] atom           = atom(dd652880 = TurnOff)
+  --   K[ 28] atom           = atom(c8f4d8f6 = Disable)
+  --   K[ 29] string_ref     = str_ref(#12)
+  --   K[ 30] atom           = atom(75c6cac9 = lookAtRevealTrigger)
+  --   K[ 31] import         = import(const#30)
+  --   K[ 32] atom           = atom(8659e708 = Symbol)
+  --   K[ 33] import         = import(const#32)
+  --   K[ 34] string_ref     = str_ref(#6)
+  --   K[ 35] atom           = atom(f738b4af)
+  --   K[ 36] atom           = atom(c588f3cf = Destroy)
+  --   K[ 37] atom           = atom(64c9fcb8 = vendorInteract)
+  --   K[ 38] import         = import(const#37)
+  L  225     0  GETUPVAL       R2, R0
+  L  225     1  FASTCALL1      R90, R2, R2
+  L  225     2  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  225     4  CALL           R1, R2, R2
+  L  225     5  JUMPIF         R1, pc=45
+  L  226     6  GETUPVAL       R1, R0
+  L  225     7  LOADB          R3 = False
+  L  225     8  LOADB          R4 = False
+  L  225     9  NAMECALL       R1, R1, atom(6ead47ac = SetVisibility)
+  L  225    11  CALL           R1, R4, R1
+  L  226    12  GETUPVAL       R1, R0
+  L  225    13  NAMECALL       R1, R1, atom(d30cffc0)
+  L  225    15  CALL           R1, R2, R1
+  L  227    16  GETIMPORT      R1 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L  225    18  JUMPIFNOT      R1, pc=45
+  L  226    19  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  225    21  GETIMPORT      R3 = import_cache(d=9) chain=import(const#8) aux=0x40800000
+  L  225    23  NAMECALL       R1, R1, atom(0a6a5887)
+  L  225    25  CALL           R1, R3, R2
+  L  225    26  SETUPVAL       R1, R1
+  L  226    27  GETUPVAL       R2, R1
+  L  225    28  FASTCALL1      R90, R2, R2
+  L  225    29  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  225    31  CALL           R1, R2, R2
+  L  225    32  JUMPIF         R1, pc=45
+  L  226    33  GETUPVAL       R1, R0
+  L  225    34  GETUPVAL       R3, R1
+  L  225    35  NAMECALL       R3, R3, atom(9afba2d5 = GetPosition)
+  L  225    37  CALL           R3, R2, R2
+  L  225    38  GETUPVAL       R4, R1
+  L  225    39  NAMECALL       R4, R4, atom(dc309f8a)
+  L  225    41  CALL           R4, R2, R0
+  L  225    42  NAMECALL       R1, R1, atom(cd866e6b = Teleport)
+  L  225    44  CALL           R1, R0, R1
+  L  230    45  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  225    47  GETIMPORT      R3 = import_cache(d=15) chain=import(const#14) aux=0x40e00000
+  L  225    49  NAMECALL       R1, R1, atom(0a6a5887)
+  L  225    51  CALL           R1, R3, R2
+  L  225    52  SETUPVAL       R1, R2
+  L  226    53  GETIMPORT      R2 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L  225    55  FASTCALL1      R90, R2, R2
+  L  225    56  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  225    58  CALL           R1, R2, R2
+  L  225    59  JUMPIF         R1, pc=84
+  L  226    60  GETIMPORT      R1 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L  225    62  GETIMPORT      R3 = import_cache(d=19) chain=import(const#18) aux=0x41200000
+  L  225    64  LOADB          R4 = False
+  L  225    65  NAMECALL       R1, R1, atom(7b7015c9)
+  L  225    67  CALL           R1, R4, R1
+  L  226    68  GETIMPORT      R1 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L  225    70  GETIMPORT      R3 = import_cache(d=19) chain=import(const#18) aux=0x41200000
+  L  225    72  LOADB          R4 = False
+  L  225    73  LOADB          R5 = False
+  L  225    74  NAMECALL       R1, R1, atom(921c1a5f)
+  L  225    76  CALL           R1, R5, R1
+  L  226    77  GETIMPORT      R1 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L  225    79  NAMECALL       R1, R1, atom(be0bea4a)
+  L  225    81  CALL           R1, R2, R2
+  L  225    82  SETGLOBAL      R1, atom(9114842a = vendorHiddenDecos)
+  L  229    84  GETIMPORT      R1 = import_cache(d=25) chain=import(const#24) aux=0x41800000
+  L  225    86  LOADB          R2 = False
+  L  225    87  SETTABLEKS     R2, R1, str_ref(#11)
+  L  227    89  GETUPVAL       R2, R2
+  L  225    90  FASTCALL1      R90, R2, R2
+  L  225    91  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  225    93  CALL           R1, R2, R2
+  L  225    94  JUMPIF         R1, pc=100
+  L  226    95  GETUPVAL       R1, R2
+  L  225    96  LOADB          R3 = False
+  L  225    97  NAMECALL       R1, R1, atom(6ead47ac = SetVisibility)
+  L  225    99  CALL           R1, R3, R1
+  L  228   100  LOADN          R3 = 1
+  L  225   101  GETGLOBAL      R4, atom(9114842a = vendorHiddenDecos)
+  L  225   103  LENGTH         R1, R4
+  L  225   104  LOADN          R2 = 1
+  L  225   105  FORNPREP       R1, pc=114
+  L  226   106  GETGLOBAL      R5, atom(9114842a = vendorHiddenDecos)
+  L  225   108  GETTABLE       R4, R5, R3
+  L  225   109  LOADB          R6 = False
+  L  225   110  NAMECALL       R4, R4, atom(6ead47ac = SetVisibility)
+  L  225   112  CALL           R4, R3, R1
+  L  480   113  FORNLOOP       R1, pc=106
+  L  229   114  LOADN          R3 = 1
+  L  225   115  GETUPVAL       R4, R3
+  L  225   116  LENGTH         R1, R4
+  L  225   117  LOADN          R2 = 1
+  L  225   118  FORNPREP       R1, pc=125
+  L  226   119  GETUPVAL       R5, R3
+  L  225   120  GETTABLE       R4, R5, R3
+  L  225   121  NAMECALL       R4, R4, atom(dd652880 = TurnOff)
+  L  225   123  CALL           R4, R2, R1
+  L  480   124  FORNLOOP       R1, pc=119
+  L  229   125  LOADN          R3 = 1
+  L  225   126  GETUPVAL       R4, R4
+  L  225   127  LENGTH         R1, R4
+  L  225   128  LOADN          R2 = 1
+  L  225   129  FORNPREP       R1, pc=136
+  L  226   130  GETUPVAL       R5, R4
+  L  225   131  GETTABLE       R4, R5, R3
+  L  225   132  NAMECALL       R4, R4, atom(c8f4d8f6 = Disable)
+  L  225   134  CALL           R4, R2, R1
+  L  480   135  FORNLOOP       R1, pc=130
+  L  229   136  JUMPIFNOT      R0, pc=141
+  L  226   137  GETGLOBAL      R1, str_ref(#12)
+  L  225   139  CALL           R1, R1, R1
+  L  225   140  JUMP           pc=178
+  L  227   141  GETIMPORT      R2 = import_cache(d=31) chain=import(const#30) aux=0x41e00000
+  L  225   143  FASTCALL1      R90, R2, R2
+  L  225   144  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  225   146  CALL           R1, R2, R2
+  L  225   147  JUMPIF         R1, pc=178
+  L  226   148  GETIMPORT      R1 = import_cache(d=31) chain=import(const#30) aux=0x41e00000
+  L  225   150  NAMECALL       R1, R1, atom(c8f4d8f6 = Disable)
+  L  225   152  CALL           R1, R2, R1
+  L  226   153  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  225   155  GETIMPORT      R3 = import_cache(d=33) chain=import(const#32) aux=0x42000000
+  L  225   157  LOADK          R4 = K[34] = str_ref(#6)
+  L  225   158  CALL           R3, R2, R2
+  L  225   159  GETIMPORT      R4 = import_cache(d=31) chain=import(const#30) aux=0x41e00000
+  L  225   161  NAMECALL       R4, R4, atom(9afba2d5 = GetPosition)
+  L  225   163  CALL           R4, R2, R2
+  L  225   164  LOADN          R5 = 0
+  L  225   165  LOADN          R6 = 5
+  L  225   166  NAMECALL       R1, R1, atom(f738b4af)
+  L  225   168  CALL           R1, R6, R2
+  L  226   169  FASTCALL1      R90, R1, R3
+  L  225   170  MOVE           R3, R1
+  L  225   171  GETIMPORT      R2 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  225   173  CALL           R2, R2, R2
+  L  225   174  JUMPIF         R2, pc=178
+  L  226   175  NAMECALL       R2, R1, atom(c588f3cf = Destroy)
+  L  225   177  CALL           R2, R2, R1
+  L  230   178  GETIMPORT      R2 = import_cache(d=38) chain=import(const#37) aux=0x42500000
+  L  225   180  FASTCALL1      R90, R2, R2
+  L  225   181  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  225   183  CALL           R1, R2, R2
+  L  225   184  JUMPIF         R1, pc=190
+  L  226   185  GETIMPORT      R1 = import_cache(d=38) chain=import(const#37) aux=0x42500000
+  L  225   187  NAMECALL       R1, R1, atom(c8f4d8f6 = Disable)
+  L  225   189  CALL           R1, R2, R1
+  L  228   190  GETUPVAL       R1, R5
+  L  225   191  LOADB          R2 = False
+  L  225   192  CALL           R1, R2, R1
+  L  226   193  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p8  stack=7 params=1 upvalues=1 varargs=0 flags=0 line=282
+  -- constants (10):
+  --   K[  0] atom           = atom(7e8ad928)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(763a6bd2)
+  --   K[  3] atom           = atom(5db877cc)
+  --   K[  4] string_ref     = str_ref(#3)
+  --   K[  5] atom           = atom(152cb4a3)
+  --   K[  6] atom           = atom(c9d0fea6)
+  --   K[  7] string_ref     = str_ref(#5)
+  --   K[  8] atom           = atom(1b78b8a3)
+  --   K[  9] atom           = atom(c384faa6)
+  L  283     0  GETUPVAL       R2, R0
+  L  283     1  FASTCALL1      R90, R2, R2
+  L  283     2  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  283     4  CALL           R1, R2, R2
+  L  283     5  JUMPIFNOT      R1, pc=8
+  L  284     6  LOADB          R1 = False
+  L  283     7  RETURN         R1, R2, R0
+  L  286     8  GETUPVAL       R1, R0
+  L  283     9  NAMECALL       R1, R1, atom(763a6bd2)
+  L  283    11  CALL           R1, R2, R2
+  L  284    12  FASTCALL1      R90, R1, R3
+  L  283    13  MOVE           R3, R1
+  L  283    14  GETIMPORT      R2 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  283    16  CALL           R2, R2, R2
+  L  283    17  JUMPIFNOT      R2, pc=20
+  L  284    18  LOADB          R2 = False
+  L  283    19  RETURN         R2, R2, R0
+  L  286    20  GETUPVAL       R2, R0
+  L  283    21  MOVE           R4, R0
+  L  283    22  NAMECALL       R2, R2, atom(5db877cc)
+  L  283    24  CALL           R2, R3, R2
+  L  284    25  LOADB          R3 = False
+  L  283    26  GETTABLEKS     R4, R2, str_ref(#3)
+  L  283    28  NAMECALL       R5, R1, atom(152cb4a3)
+  L  283    30  CALL           R5, R2, R2
+  L  283    31  JUMPIFNOTLT    R4, R5, pc=58
+  L  283    33  LOADB          R3 = False
+  L  284    34  GETTABLEKS     R4, R2, str_ref(#3)
+  L  283    36  NAMECALL       R5, R1, atom(c9d0fea6)
+  L  283    38  CALL           R5, R2, R2
+  L  283    39  JUMPIFNOTLT    R5, R4, pc=58
+  L  283    41  LOADB          R3 = False
+  L  284    42  GETTABLEKS     R4, R2, str_ref(#5)
+  L  283    44  NAMECALL       R5, R1, atom(1b78b8a3)
+  L  283    46  CALL           R5, R2, R2
+  L  283    47  JUMPIFNOTLT    R4, R5, pc=58
+  L  284    49  GETTABLEKS     R4, R2, str_ref(#5)
+  L  283    51  NAMECALL       R5, R1, atom(c384faa6)
+  L  283    53  CALL           R5, R2, R2
+  L  283    54  JUMPIFLT       R5, R4, pc=57
+  L  283    56  LOADB          R3 = False  +1
+  L  283    57  LOADB          R3 = True
+  L  283    58  RETURN         R3, R2, R0
+end
+
+-- ============================================================
+function p9  stack=7 params=1 upvalues=0 varargs=0 flags=0 line=299
+  -- constants (3):
+  --   K[  0] atom           = atom(3eda9895 = tagsToKeepHidden)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(db682341)
+  L  300     0  LOADN          R3 = 1
+  L  300     1  GETIMPORT      R4 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  300     3  LENGTH         R1, R4
+  L  300     4  LOADN          R2 = 1
+  L  300     5  FORNPREP       R1, pc=17
+  L  301     6  NAMECALL       R4, R0, atom(db682341)
+  L  300     8  CALL           R4, R2, R2
+  L  300     9  GETIMPORT      R6 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  300    11  GETTABLE       R5, R6, R3
+  L  300    12  JUMPIFNOTEQ    R4, R5, pc=16
+  L  301    14  LOADB          R4 = True
+  L  300    15  RETURN         R4, R2, R0
+  L  554    16  FORNLOOP       R1, pc=6
+  L  305    17  LOADB          R1 = False
+  L  300    18  RETURN         R1, R2, R0
+end
+
+-- ============================================================
+function p10  stack=15 params=2 upvalues=16 varargs=0 flags=0 line=309
+  -- constants (116):
+  --   K[  0] atom           = atom(860b110e = vendorAncestorRes)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(7e8ad928)
+  --   K[  3] import         = import(const#2)
+  --   K[  4] atom           = atom(712cbb48 = GetLocalPlayerAncestorOfType)
+  --   K[  5] atom           = atom(bfc20c13 = showSparrow)
+  --   K[  6] import         = import(const#5)
+  --   K[  7] atom           = atom(ae3ffccd = gRegion)
+  --   K[  8] import         = import(const#7)
+  --   K[  9] atom           = atom(9afba2d5 = GetPosition)
+  --   K[ 10] atom           = atom(f738b4af)
+  --   K[ 11] atom           = atom(3918392d = isTentReveal)
+  --   K[ 12] import         = import(const#11)
+  --   K[ 13] atom           = atom(f0bf8ede = _T)
+  --   K[ 14] import         = import(const#13)
+  --   K[ 15] string_ref     = str_ref(#13)
+  --   K[ 16] string_ref     = str_ref(#14)
+  --   K[ 17] atom           = atom(31c6f706)
+  --   K[ 18] atom           = atom(46dbfc73 = AddSparrowDestination)
+  --   K[ 19] string_ref     = str_ref(#2)
+  --   K[ 20] string_ref     = str_ref(#15)
+  --   K[ 21] number         = num(2.0)
+  --   K[ 22] string_ref     = str_ref(#8)
+  --   K[ 23] string_ref     = str_ref(#9)
+  --   K[ 24] atom           = atom(5f4e6e78 = Range)
+  --   K[ 25] import         = import(const#24)
+  --   K[ 26] string_ref     = str_ref(#16)
+  --   K[ 27] import         = import(const#13.const#26)
+  --   K[ 28] atom           = atom(09f3e2f4 = Sleep)
+  --   K[ 29] import         = import(const#28)
+  --   K[ 30] atom           = atom(6266f538 = Enable)
+  --   K[ 31] atom           = atom(8659e708 = Symbol)
+  --   K[ 32] import         = import(const#31)
+  --   K[ 33] string_ref     = str_ref(#17)
+  --   K[ 34] string_ref     = str_ref(#18)
+  --   K[ 35] atom           = atom(060f1f46 = FirePort)
+  --   K[ 36] atom           = atom(a2a18137)
+  --   K[ 37] atom           = atom(495bbc2e = preRevealPortsToFire)
+  --   K[ 38] import         = import(const#37)
+  --   K[ 39] string_ref     = str_ref(#19)
+  --   K[ 40] atom           = atom(c0ec49e8 = vendorStationDecoInstance)
+  --   K[ 41] import         = import(const#40)
+  --   K[ 42] atom           = atom(be0bea4a)
+  --   K[ 43] atom           = atom(6ead47ac = SetVisibility)
+  --   K[ 44] atom           = atom(3eda9895 = tagsToKeepHidden)
+  --   K[ 45] import         = import(const#44)
+  --   K[ 46] atom           = atom(2226b35c)
+  --   K[ 47] string_ref     = str_ref(#11)
+  --   K[ 48] atom           = atom(f7b52061 = ancestorDecoTag)
+  --   K[ 49] import         = import(const#48)
+  --   K[ 50] atom           = atom(0a6a5887)
+  --   K[ 51] atom           = atom(c42d957f = EMPTY_SYMBOL)
+  --   K[ 52] import         = import(const#51)
+  --   K[ 53] atom           = atom(e93b649c = print)
+  --   K[ 54] import         = import(const#53)
+  --   K[ 55] string_ref     = str_ref(#20)
+  --   K[ 56] atom           = atom(5b41f63b)
+  --   K[ 57] atom           = atom(c3975947 = ReplicateLogEvent)
+  --   K[ 58] string_ref     = str_ref(#21)
+  --   K[ 59] string_ref     = str_ref(#22)
+  --   K[ 60] string_ref     = str_ref(#23)
+  --   K[ 61] atom           = atom(839dbdde = heirloomDecoTag)
+  --   K[ 62] import         = import(const#61)
+  --   K[ 63] string_ref     = str_ref(#6)
+  --   K[ 64] atom           = atom(c588f3cf = Destroy)
+  --   K[ 65] number         = num(0.5)
+  --   K[ 66] atom           = atom(eab484a7)
+  --   K[ 67] atom           = atom(7dacb329 = vendorRevealSFXTag)
+  --   K[ 68] import         = import(const#67)
+  --   K[ 69] atom           = atom(7ecabe9c = EnableTaggedSequencers)
+  --   K[ 70] atom           = atom(68f2c268)
+  --   K[ 71] atom           = atom(d31f1620 = vendorEmergeDecoAnim)
+  --   K[ 72] import         = import(const#71)
+  --   K[ 73] atom           = atom(921c1a5f)
+  --   K[ 74] atom           = atom(8bb4ded3)
+  --   K[ 75] atom           = atom(a6c0f1b8)
+  --   K[ 76] number         = num(0.2)
+  --   K[ 77] atom           = atom(717cddbf = vendorVisibleDecoAnim)
+  --   K[ 78] import         = import(const#77)
+  --   K[ 79] atom           = atom(7b7015c9)
+  --   K[ 80] string_ref     = str_ref(#24)
+  --   K[ 81] atom           = atom(64c9fcb8 = vendorInteract)
+  --   K[ 82] import         = import(const#81)
+  --   K[ 83] string_ref     = str_ref(#25)
+  --   K[ 84] string_ref     = str_ref(#26)
+  --   K[ 85] number         = num(3.0)
+  --   K[ 86] atom           = atom(0adcb8fd = TurnOn)
+  --   K[ 87] atom           = atom(c09dcfb2 = TaggedFirePorts)
+  --   K[ 88] atom           = atom(03c2ed1f = vendorActiveSFXTag)
+  --   K[ 89] import         = import(const#88)
+  --   K[ 90] atom           = atom(88b6eb81 = ancestorPostRiseCine)
+  --   K[ 91] import         = import(const#90)
+  --   K[ 92] atom           = atom(3c8df8e7 = ancestorPlacedIdle)
+  --   K[ 93] import         = import(const#92)
+  --   K[ 94] atom           = atom(d927a2a4)
+  --   K[ 95] string_ref     = str_ref(#27)
+  --   K[ 96] atom           = atom(7d4910e4)
+  --   K[ 97] atom           = atom(48fa6bc4)
+  --   K[ 98] string_ref     = str_ref(#28)
+  --   K[ 99] atom           = atom(61c1cfe2 = DissolveIn)
+  --   K[100] atom           = atom(e0bef23e = revealDialougeTag)
+  --   K[101] import         = import(const#100)
+  --   K[102] atom           = atom(1bffd5f4 = PlayLocalTransmission)
+  --   K[103] atom           = atom(7421aaa7 = vendorTransmissionSet)
+  --   K[104] import         = import(const#103)
+  --   K[105] atom           = atom(c4f78a8f)
+  --   K[106] string_ref     = str_ref(#29)
+  --   K[107] atom           = atom(5f71328d = ShouldForceInteractDisable)
+  --   K[108] atom           = atom(de89c50a = WeakResource)
+  --   K[109] import         = import(const#108)
+  --   K[110] atom           = atom(c8f4d8f6 = Disable)
+  --   K[111] atom           = atom(12b5aae2 = postRevealPortsToFire)
+  --   K[112] import         = import(const#111)
+  --   K[113] atom           = atom(a470273d = RemoveSparrowDestination)
+  --   K[114] atom           = atom(e7c161a0 = tostring)
+  --   K[115] import         = import(const#114)
+  L  311     0  GETIMPORT      R3 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0     2  FASTCALL1      R90, R3, R2
+  L    0     3  GETIMPORT      R2 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0     5  CALL           R2, R2, R2
+  L    0     6  JUMPIF         R2, pc=15
+  L    1     7  GETUPVAL       R3, R1
+  L    0     8  GETTABLEKS     R2, R3, atom(712cbb48 = GetLocalPlayerAncestorOfType)
+  L    0    10  GETIMPORT      R3 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0    12  LOADB          R4 = True
+  L    0    13  CALL           R2, R3, R2
+  L    0    14  SETUPVAL       R2, R0
+  L    2    15  LOADNIL        R2
+  L    1    16  GETIMPORT      R3 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L    0    18  JUMPIFNOT      R3, pc=74
+  L    1    19  MOVE           R2, R1
+  L    1    20  GETIMPORT      R3 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L    0    22  GETUPVAL       R5, R2
+  L    0    23  NAMECALL       R6, R1, atom(9afba2d5 = GetPosition)
+  L    0    25  CALL           R6, R2, R2
+  L    0    26  LOADN          R7 = 0
+  L    0    27  LOADN          R8 = 10
+  L    0    28  NAMECALL       R3, R3, atom(f738b4af)
+  L    0    30  CALL           R3, R6, R2
+  L    2    31  FASTCALL1      R90, R3, R3
+  L    0    32  MOVE           R5, R3
+  L    0    33  GETIMPORT      R4 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0    35  CALL           R4, R2, R2
+  L    0    36  JUMPIF         R4, pc=38
+  L    1    37  MOVE           R2, R3
+  L    3    38  GETIMPORT      R4 = import_cache(d=12) chain=import(const#11) aux=0x40b00000
+  L    0    40  JUMPIF         R4, pc=46
+  L    1    41  GETIMPORT      R4 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0    43  LOADK          R5 = K[15] = str_ref(#13)
+  L    0    44  SETTABLEKS     R5, R4, str_ref(#14)
+  L    3    46  NAMECALL       R4, R2, atom(31c6f706)
+  L    0    48  CALL           R4, R2, R2
+  L    1    49  LENGTH         R5, R4
+  L    0    50  LOADN          R6 = 0
+  L    0    51  JUMPIFNOTLT    R6, R5, pc=74
+  L    1    53  GETTABLEN      R2, R4, R0
+  L    1    54  GETUPVAL       R6, R3
+  L    0    55  GETTABLEKS     R5, R6, atom(46dbfc73 = AddSparrowDestination)
+  L    0    57  MOVE           R6, R2
+  L    0    58  LOADNIL        R7
+  L    0    59  LOADK          R9 = K[19] = str_ref(#2)
+  L    0    60  LOADK          R10 = K[20] = str_ref(#15)
+  L    0    61  CONCAT         R8, R9, R10
+  L    0    62  GETUPVAL       R12, R3
+  L    0    63  GETTABLEKS     R11, R12, str_ref(#8)
+  L    0    65  GETTABLEKS     R10, R11, str_ref(#9)
+  L    0    67  ADDK           R9, R10, num(2.0)
+  L    0    68  GETIMPORT      R10 = import_cache(d=25) chain=import(const#24) aux=0x41800000
+  L    0    70  LOADN          R11 = 0
+  L    0    71  LOADN          R12 = 100
+  L    0    72  CALL           R10, R3, R0
+  L    0    73  CALL           R5, R0, R1
+  L    4    74  GETIMPORT      R3 = import_cache(d=27) chain=import(const#13.const#26) aux=0x80d06800
+  L    0    76  JUMPXEQKB      R3, pc=86, val=True, not=True
+  L    1    78  GETIMPORT      R3 = import_cache(d=29) chain=import(const#28) aux=0x41c00000
+  L    0    80  LOADN          R4 = 4
+  L    0    81  CALL           R3, R2, R1
+  L    1    82  NAMECALL       R3, R1, atom(6266f538 = Enable)
+  L    0    84  CALL           R3, R2, R1
+  L    1    85  RETURN         R0, R1, R0
+  L    4    86  GETIMPORT      R3 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0    88  LOADB          R4 = True
+  L    0    89  SETTABLEKS     R4, R3, str_ref(#16)
+  L    3    91  GETIMPORT      R3 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L    0    93  GETIMPORT      R5 = import_cache(d=32) chain=import(const#31) aux=0x41f00000
+  L    0    95  LOADK          R6 = K[33] = str_ref(#17)
+  L    0    96  CALL           R5, R2, R2
+  L    0    97  NAMECALL       R6, R1, atom(9afba2d5 = GetPosition)
+  L    0    99  CALL           R6, R2, R2
+  L    0   100  LOADN          R7 = 0
+  L    0   101  LOADN          R8 = 14
+  L    0   102  NAMECALL       R3, R3, atom(f738b4af)
+  L    0   104  CALL           R3, R6, R2
+  L    0   105  SETUPVAL       R3, R4
+  L    1   106  GETUPVAL       R4, R4
+  L    0   107  FASTCALL1      R90, R4, R2
+  L    0   108  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   110  CALL           R3, R2, R2
+  L    0   111  JUMPIF         R3, pc=134
+  L    1   112  GETUPVAL       R3, R4
+  L    0   113  LOADK          R5 = K[34] = str_ref(#18)
+  L    0   114  NAMECALL       R3, R3, atom(060f1f46 = FirePort)
+  L    0   116  CALL           R3, R3, R1
+  L    1   117  FASTCALL1      R90, R0, R3
+  L    0   118  MOVE           R4, R0
+  L    0   119  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   121  CALL           R3, R2, R2
+  L    0   122  JUMPIF         R3, pc=134
+  L    0   123  GETUPVAL       R3, R5
+  L    0   124  NAMECALL       R4, R0, atom(a2a18137)
+  L    0   126  CALL           R4, R2, R0
+  L    0   127  CALL           R3, R0, R2
+  L    0   128  JUMPIFNOT      R3, pc=134
+  L    1   129  GETIMPORT      R3 = import_cache(d=29) chain=import(const#28) aux=0x41c00000
+  L    0   131  LOADN          R4 = 0
+  L    0   132  CALL           R3, R2, R1
+  L   -1   133  JUMPBACK       pc=117
+  L    5   134  GETIMPORT      R4 = import_cache(d=38) chain=import(const#37) aux=0x42500000
+  L    0   136  FASTCALL1      R90, R4, R2
+  L    0   137  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   139  CALL           R3, R2, R2
+  L    0   140  JUMPIF         R3, pc=147
+  L    1   141  GETIMPORT      R3 = import_cache(d=38) chain=import(const#37) aux=0x42500000
+  L    0   143  LOADK          R5 = K[39] = str_ref(#19)
+  L    0   144  NAMECALL       R3, R3, atom(060f1f46 = FirePort)
+  L    0   146  CALL           R3, R3, R1
+  L    3   147  GETIMPORT      R4 = import_cache(d=41) chain=import(const#40) aux=0x42800000
+  L    0   149  FASTCALL1      R90, R4, R2
+  L    0   150  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   152  CALL           R3, R2, R2
+  L    0   153  JUMPIF         R3, pc=195
+  L    1   154  GETIMPORT      R3 = import_cache(d=41) chain=import(const#40) aux=0x42800000
+  L    0   156  NAMECALL       R3, R3, atom(be0bea4a)
+  L    0   158  CALL           R3, R2, R2
+  L    2   159  LOADN          R6 = 1
+  L    0   160  LENGTH         R4, R3
+  L    0   161  LOADN          R5 = 1
+  L    0   162  FORNPREP       R4, pc=169
+  L    1   163  GETTABLE       R7, R3, R6
+  L    0   164  LOADB          R9 = True
+  L    0   165  NAMECALL       R7, R7, atom(6ead47ac = SetVisibility)
+  L    0   167  CALL           R7, R3, R1
+  L   -1   168  FORNLOOP       R4, pc=163
+  L    3   169  LOADN          R6 = 1
+  L    0   170  GETIMPORT      R7 = import_cache(d=45) chain=import(const#44) aux=0x42c00000
+  L    0   172  LENGTH         R4, R7
+  L    0   173  LOADN          R5 = 1
+  L    0   174  FORNPREP       R4, pc=195
+  L    1   175  GETIMPORT      R7 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L    0   177  GETIMPORT      R10 = import_cache(d=45) chain=import(const#44) aux=0x42c00000
+  L    0   179  GETTABLE       R9, R10, R6
+  L    0   180  NAMECALL       R7, R7, atom(2226b35c)
+  L    0   182  CALL           R7, R3, R2
+  L    1   183  LOADN          R10 = 1
+  L    0   184  LENGTH         R8, R7
+  L    0   185  LOADN          R9 = 1
+  L    0   186  FORNPREP       R8, pc=194
+  L    1   187  GETTABLE       R11, R7, R10
+  L    0   188  LOADB          R13 = False
+  L    0   189  LOADB          R14 = False
+  L    0   190  NAMECALL       R11, R11, atom(6ead47ac = SetVisibility)
+  L    0   192  CALL           R11, R4, R1
+  L   -1   193  FORNLOOP       R8, pc=187
+  L   -2   194  FORNLOOP       R4, pc=175
+  L    8   195  GETIMPORT      R3 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0   197  LOADB          R4 = True
+  L    0   198  SETTABLEKS     R4, R3, str_ref(#11)
+  L    2   200  GETUPVAL       R4, R6
+  L    0   201  FASTCALL1      R90, R4, R2
+  L    0   202  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   204  CALL           R3, R2, R2
+  L    0   205  JUMPIFNOT      R3, pc=283
+  L    1   206  GETIMPORT      R3 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L    0   208  GETIMPORT      R5 = import_cache(d=49) chain=import(const#48) aux=0x43000000
+  L    0   210  NAMECALL       R3, R3, atom(0a6a5887)
+  L    0   212  CALL           R3, R3, R2
+  L    0   213  SETUPVAL       R3, R6
+  L    1   214  GETUPVAL       R4, R6
+  L    0   215  FASTCALL1      R90, R4, R2
+  L    0   216  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   218  CALL           R3, R2, R2
+  L    0   219  JUMPIFNOT      R3, pc=234
+  L    1   220  GETIMPORT      R3 = import_cache(d=49) chain=import(const#48) aux=0x43000000
+  L    0   222  GETIMPORT      R4 = import_cache(d=52) chain=import(const#51) aux=0x43300000
+  L    0   224  JUMPIFEQ       R3, R4, pc=234
+  L    1   226  GETIMPORT      R3 = import_cache(d=54) chain=import(const#53) aux=0x43500000
+  L    0   228  LOADK          R5 = K[55] = str_ref(#20)
+  L    0   229  GETIMPORT      R6 = import_cache(d=49) chain=import(const#48) aux=0x43000000
+  L    0   231  CONCAT         R4, R5, R6
+  L    0   232  CALL           R3, R2, R1
+  L    1   233  RETURN         R0, R1, R0
+  L    4   234  GETUPVAL       R4, R0
+  L    0   235  FASTCALL1      R90, R4, R2
+  L    0   236  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   238  CALL           R3, R2, R2
+  L    0   239  JUMPIF         R3, pc=283
+  L    0   240  GETIMPORT      R4 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0   242  FASTCALL1      R90, R4, R2
+  L    0   243  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   245  CALL           R3, R2, R2
+  L    0   246  JUMPIF         R3, pc=283
+  L    0   247  GETIMPORT      R4 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0   249  NAMECALL       R4, R4, atom(5b41f63b)
+  L    0   251  CALL           R4, R2, R0
+  L    0   252  FASTCALL       R90, R0, R2
+  L    0   253  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   255  CALL           R3, R0, R2
+  L    0   256  JUMPIF         R3, pc=283
+  L    1   257  GETIMPORT      R3 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0   259  NAMECALL       R3, R3, atom(5b41f63b)
+  L    0   261  CALL           R3, R2, R2
+  L    1   262  GETUPVAL       R5, R7
+  L    0   263  GETTABLEKS     R4, R5, atom(c3975947 = ReplicateLogEvent)
+  L    0   265  LOADK          R5 = K[58] = str_ref(#21)
+  L    0   266  LOADK          R6 = K[59] = str_ref(#22)
+  L    0   267  MOVE           R7, R3
+  L    0   268  CALL           R4, R4, R1
+  L    1   269  GETUPVAL       R7, R7
+  L    0   270  GETTABLEKS     R6, R7, str_ref(#23)
+  L    0   272  GETTABLE       R5, R6, R3
+  L    0   273  FASTCALL1      R90, R5, R2
+  L    0   274  GETIMPORT      R4 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   276  CALL           R4, R2, R2
+  L    0   277  JUMPIF         R4, pc=283
+  L    1   278  GETUPVAL       R5, R7
+  L    0   279  GETTABLEKS     R4, R5, str_ref(#23)
+  L    0   281  LOADB          R5 = False
+  L    0   282  SETTABLE       R5, R4, R3
+  L    5   283  GETIMPORT      R4 = import_cache(d=62) chain=import(const#61) aux=0x43d00000
+  L    0   285  FASTCALL1      R90, R4, R2
+  L    0   286  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   288  CALL           R3, R2, R2
+  L    0   289  JUMPIF         R3, pc=304
+  L    0   290  GETUPVAL       R4, R8
+  L    0   291  FASTCALL1      R90, R4, R2
+  L    0   292  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   294  CALL           R3, R2, R2
+  L    0   295  JUMPIFNOT      R3, pc=304
+  L    1   296  GETIMPORT      R3 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L    0   298  GETIMPORT      R5 = import_cache(d=62) chain=import(const#61) aux=0x43d00000
+  L    0   300  NAMECALL       R3, R3, atom(0a6a5887)
+  L    0   302  CALL           R3, R3, R2
+  L    0   303  SETUPVAL       R3, R8
+  L    4   304  GETIMPORT      R3 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L    0   306  GETIMPORT      R5 = import_cache(d=32) chain=import(const#31) aux=0x41f00000
+  L    0   308  LOADK          R6 = K[63] = str_ref(#6)
+  L    0   309  CALL           R5, R2, R2
+  L    0   310  NAMECALL       R6, R1, atom(9afba2d5 = GetPosition)
+  L    0   312  CALL           R6, R2, R2
+  L    0   313  LOADN          R7 = 0
+  L    0   314  LOADN          R8 = 5
+  L    0   315  NAMECALL       R3, R3, atom(f738b4af)
+  L    0   317  CALL           R3, R6, R2
+  L    1   318  FASTCALL1      R90, R3, R3
+  L    0   319  MOVE           R5, R3
+  L    0   320  GETIMPORT      R4 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   322  CALL           R4, R2, R2
+  L    0   323  JUMPIF         R4, pc=327
+  L    1   324  NAMECALL       R4, R3, atom(c588f3cf = Destroy)
+  L    0   326  CALL           R4, R2, R1
+  L    3   327  GETIMPORT      R4 = import_cache(d=29) chain=import(const#28) aux=0x41c00000
+  L    0   329  LOADK          R5 = K[65] = num(0.5)
+  L    0   330  CALL           R4, R2, R1
+  L    1   331  GETIMPORT      R4 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L    0   333  NAMECALL       R4, R4, atom(eab484a7)
+  L    0   335  CALL           R4, R2, R2
+  L    1   336  GETIMPORT      R6 = import_cache(d=68) chain=import(const#67) aux=0x44300000
+  L    0   338  FASTCALL1      R90, R6, R2
+  L    0   339  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   341  CALL           R5, R2, R2
+  L    0   342  JUMPIF         R5, pc=350
+  L    1   343  GETUPVAL       R6, R9
+  L    0   344  GETTABLEKS     R5, R6, atom(7ecabe9c = EnableTaggedSequencers)
+  L    0   346  GETIMPORT      R6 = import_cache(d=68) chain=import(const#67) aux=0x44300000
+  L    0   348  LOADB          R7 = True
+  L    0   349  CALL           R5, R3, R1
+  L    4   350  GETUPVAL       R6, R6
+  L    0   351  FASTCALL1      R90, R6, R2
+  L    0   352  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   354  CALL           R5, R2, R2
+  L    0   355  JUMPIF         R5, pc=361
+  L    1   356  GETUPVAL       R5, R6
+  L    0   357  LOADN          R7 = 1
+  L    0   358  NAMECALL       R5, R5, atom(68f2c268)
+  L    0   360  CALL           R5, R3, R1
+  L    3   361  GETUPVAL       R6, R8
+  L    0   362  FASTCALL1      R90, R6, R2
+  L    0   363  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   365  CALL           R5, R2, R2
+  L    0   366  JUMPIF         R5, pc=372
+  L    1   367  GETUPVAL       R5, R8
+  L    0   368  LOADN          R7 = 1
+  L    0   369  NAMECALL       R5, R5, atom(68f2c268)
+  L    0   371  CALL           R5, R3, R1
+  L    4   372  GETIMPORT      R6 = import_cache(d=41) chain=import(const#40) aux=0x42800000
+  L    0   374  FASTCALL1      R90, R6, R2
+  L    0   375  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   377  CALL           R5, R2, R2
+  L    0   378  JUMPIF         R5, pc=427
+  L    2   379  GETIMPORT      R5 = import_cache(d=41) chain=import(const#40) aux=0x42800000
+  L    0   381  GETIMPORT      R7 = import_cache(d=72) chain=import(const#71) aux=0x44700000
+  L    0   383  LOADB          R8 = False
+  L    0   384  LOADB          R9 = False
+  L    0   385  NAMECALL       R5, R5, atom(921c1a5f)
+  L    0   387  CALL           R5, R5, R1
+  L    3   388  GETIMPORT      R5 = import_cache(d=72) chain=import(const#71) aux=0x44700000
+  L    0   390  NAMECALL       R5, R5, atom(8bb4ded3)
+  L    0   392  CALL           R5, R2, R2
+  L    1   393  LOADN          R8 = 4
+  L    0   394  LOADK          R9 = K[65] = num(0.5)
+  L    0   395  LOADK          R10 = K[65] = num(0.5)
+  L    0   396  MOVE           R11, R5
+  L    0   397  NAMECALL       R6, R4, atom(a6c0f1b8)
+  L    0   399  CALL           R6, R6, R1
+  L    1   400  GETIMPORT      R6 = import_cache(d=29) chain=import(const#28) aux=0x41c00000
+  L    0   402  LOADK          R7 = K[76] = num(0.2)
+  L    0   403  CALL           R6, R2, R1
+  L    3   404  GETIMPORT      R6 = import_cache(d=41) chain=import(const#40) aux=0x42800000
+  L    0   406  GETIMPORT      R8 = import_cache(d=78) chain=import(const#77) aux=0x44d00000
+  L    0   408  LOADB          R9 = False
+  L    0   409  NAMECALL       R6, R6, atom(7b7015c9)
+  L    0   411  CALL           R6, R4, R1
+  L    1   412  GETIMPORT      R6 = import_cache(d=29) chain=import(const#28) aux=0x41c00000
+  L    0   414  SUBK           R7, R5, num(0.2)
+  L    0   415  CALL           R6, R2, R1
+  L    3   416  GETUPVAL       R7, R4
+  L    0   417  FASTCALL1      R90, R7, R2
+  L    0   418  GETIMPORT      R6 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   420  CALL           R6, R2, R2
+  L    0   421  JUMPIF         R6, pc=427
+  L    2   422  GETUPVAL       R6, R4
+  L    0   423  LOADK          R8 = K[80] = str_ref(#24)
+  L    0   424  NAMECALL       R6, R6, atom(060f1f46 = FirePort)
+  L    0   426  CALL           R6, R3, R1
+  L    4   427  GETIMPORT      R5 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L    0   429  JUMPIFNOT      R5, pc=483
+  L    1   430  GETIMPORT      R6 = import_cache(d=82) chain=import(const#81) aux=0x45100000
+  L    0   432  FASTCALL1      R90, R6, R2
+  L    0   433  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   435  CALL           R5, R2, R2
+  L    0   436  JUMPIF         R5, pc=439
+  L    1   437  GETIMPORT      R2 = import_cache(d=82) chain=import(const#81) aux=0x45100000
+  L    3   439  GETIMPORT      R5 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L    0   441  GETIMPORT      R7 = import_cache(d=32) chain=import(const#31) aux=0x41f00000
+  L    0   443  LOADK          R8 = K[83] = str_ref(#25)
+  L    0   444  CALL           R7, R2, R2
+  L    0   445  NAMECALL       R8, R1, atom(9afba2d5 = GetPosition)
+  L    0   447  CALL           R8, R2, R2
+  L    0   448  LOADN          R9 = 0
+  L    0   449  LOADN          R10 = 12
+  L    0   450  NAMECALL       R5, R5, atom(f738b4af)
+  L    0   452  CALL           R5, R6, R2
+  L    1   453  FASTCALL1      R90, R5, R3
+  L    0   454  MOVE           R7, R5
+  L    0   455  GETIMPORT      R6 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   457  CALL           R6, R2, R2
+  L    0   458  JUMPIF         R6, pc=463
+  L    1   459  MOVE           R2, R5
+  L    1   460  NAMECALL       R6, R5, atom(6266f538 = Enable)
+  L    0   462  CALL           R6, R2, R1
+  L    3   463  GETUPVAL       R7, R3
+  L    0   464  GETTABLEKS     R6, R7, atom(46dbfc73 = AddSparrowDestination)
+  L    0   466  MOVE           R7, R2
+  L    0   467  LOADNIL        R8
+  L    0   468  LOADK          R10 = K[19] = str_ref(#2)
+  L    0   469  LOADK          R11 = K[84] = str_ref(#26)
+  L    0   470  CONCAT         R9, R10, R11
+  L    0   471  GETUPVAL       R13, R3
+  L    0   472  GETTABLEKS     R12, R13, str_ref(#8)
+  L    0   474  GETTABLEKS     R11, R12, str_ref(#9)
+  L    0   476  ADDK           R10, R11, num(3.0)
+  L    0   477  GETIMPORT      R11 = import_cache(d=25) chain=import(const#24) aux=0x41800000
+  L    0   479  LOADN          R12 = 0
+  L    0   480  LOADN          R13 = 100
+  L    0   481  CALL           R11, R3, R0
+  L    0   482  CALL           R6, R0, R1
+  L    2   483  GETUPVAL       R5, R10
+  L    0   484  LOADB          R6 = True
+  L    0   485  CALL           R5, R2, R1
+  L    2   486  LOADN          R7 = 1
+  L    0   487  GETUPVAL       R8, R11
+  L    0   488  LENGTH         R5, R8
+  L    0   489  LOADN          R6 = 1
+  L    0   490  FORNPREP       R5, pc=497
+  L    1   491  GETUPVAL       R9, R11
+  L    0   492  GETTABLE       R8, R9, R7
+  L    0   493  NAMECALL       R8, R8, atom(0adcb8fd = TurnOn)
+  L    0   495  CALL           R8, R2, R1
+  L   -1   496  FORNLOOP       R5, pc=491
+  L    4   497  LOADN          R7 = 1
+  L    0   498  GETUPVAL       R8, R12
+  L    0   499  LENGTH         R5, R8
+  L    0   500  LOADN          R6 = 1
+  L    0   501  FORNPREP       R5, pc=508
+  L    1   502  GETUPVAL       R9, R12
+  L    0   503  GETTABLE       R8, R9, R7
+  L    0   504  NAMECALL       R8, R8, atom(6266f538 = Enable)
+  L    0   506  CALL           R8, R2, R1
+  L   -1   507  FORNLOOP       R5, pc=502
+  L    3   508  GETUPVAL       R6, R13
+  L    0   509  GETTABLEKS     R5, R6, atom(c09dcfb2 = TaggedFirePorts)
+  L    0   511  GETIMPORT      R6 = import_cache(d=89) chain=import(const#88) aux=0x45800000
+  L    0   513  LOADK          R7 = K[39] = str_ref(#19)
+  L    0   514  CALL           R5, R3, R1
+  L    3   515  GETUPVAL       R6, R8
+  L    0   516  FASTCALL1      R90, R6, R2
+  L    0   517  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   519  CALL           R5, R2, R2
+  L    0   520  JUMPIF         R5, pc=526
+  L    1   521  GETUPVAL       R5, R8
+  L    0   522  LOADB          R7 = True
+  L    0   523  NAMECALL       R5, R5, atom(6ead47ac = SetVisibility)
+  L    0   525  CALL           R5, R3, R1
+  L    4   526  GETIMPORT      R6 = import_cache(d=91) chain=import(const#90) aux=0x45a00000
+  L    0   528  FASTCALL1      R90, R6, R2
+  L    0   529  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   531  CALL           R5, R2, R2
+  L    0   532  JUMPIF         R5, pc=574
+  L    0   533  GETUPVAL       R6, R0
+  L    0   534  FASTCALL1      R90, R6, R2
+  L    0   535  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   537  CALL           R5, R2, R2
+  L    0   538  JUMPIF         R5, pc=574
+  L    1   539  GETIMPORT      R6 = import_cache(d=93) chain=import(const#92) aux=0x45c00000
+  L    0   541  FASTCALL1      R90, R6, R2
+  L    0   542  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   544  CALL           R5, R2, R2
+  L    0   545  JUMPIF         R5, pc=552
+  L    1   546  GETUPVAL       R5, R6
+  L    0   547  GETIMPORT      R7 = import_cache(d=93) chain=import(const#92) aux=0x45c00000
+  L    0   549  NAMECALL       R5, R5, atom(d927a2a4)
+  L    0   551  CALL           R5, R3, R1
+  L    2   552  GETUPVAL       R5, R6
+  L    0   553  NAMECALL       R5, R5, atom(6266f538 = Enable)
+  L    0   555  CALL           R5, R2, R1
+  L    1   556  GETIMPORT      R5 = import_cache(d=91) chain=import(const#90) aux=0x45a00000
+  L    0   558  LOADK          R7 = K[95] = str_ref(#27)
+  L    0   559  NAMECALL       R5, R5, atom(060f1f46 = FirePort)
+  L    0   561  CALL           R5, R3, R1
+  L    1   562  GETIMPORT      R5 = import_cache(d=91) chain=import(const#90) aux=0x45a00000
+  L    0   564  NAMECALL       R5, R5, atom(7d4910e4)
+  L    0   566  CALL           R5, R2, R2
+  L    0   567  JUMPIFNOT      R5, pc=625
+  L    1   568  GETIMPORT      R5 = import_cache(d=29) chain=import(const#28) aux=0x41c00000
+  L    0   570  LOADN          R6 = 0
+  L    0   571  CALL           R5, R2, R1
+  L   -1   572  JUMPBACK       pc=562
+  L    0   573  JUMP           pc=625
+  L    4   574  GETUPVAL       R6, R6
+  L    0   575  FASTCALL1      R90, R6, R2
+  L    0   576  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   578  CALL           R5, R2, R2
+  L    0   579  JUMPIF         R5, pc=625
+  L    1   580  GETUPVAL       R5, R6
+  L    0   581  NAMECALL       R5, R5, atom(48fa6bc4)
+  L    0   583  CALL           R5, R2, R1
+  L    1   584  GETUPVAL       R6, R9
+  L    0   585  GETTABLEKS     R5, R6, atom(7ecabe9c = EnableTaggedSequencers)
+  L    0   587  GETIMPORT      R6 = import_cache(d=32) chain=import(const#31) aux=0x41f00000
+  L    0   589  LOADK          R7 = K[98] = str_ref(#28)
+  L    0   590  CALL           R6, R2, R2
+  L    0   591  LOADB          R7 = True
+  L    0   592  CALL           R5, R3, R1
+  L    1   593  GETUPVAL       R6, R1
+  L    0   594  GETTABLEKS     R5, R6, atom(61c1cfe2 = DissolveIn)
+  L    0   596  GETUPVAL       R6, R6
+  L    0   597  CALL           R5, R2, R1
+  L    2   598  GETIMPORT      R6 = import_cache(d=101) chain=import(const#100) aux=0x46400000
+  L    0   600  FASTCALL1      R90, R6, R2
+  L    0   601  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   603  CALL           R5, R2, R2
+  L    0   604  JUMPIF         R5, pc=625
+  L    0   605  GETUPVAL       R6, R0
+  L    0   606  FASTCALL1      R90, R6, R2
+  L    0   607  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   609  CALL           R5, R2, R2
+  L    0   610  JUMPIF         R5, pc=625
+  L    1   611  GETUPVAL       R6, R14
+  L    0   612  GETTABLEKS     R5, R6, atom(1bffd5f4 = PlayLocalTransmission)
+  L    0   614  GETIMPORT      R6 = import_cache(d=104) chain=import(const#103) aux=0x46700000
+  L    0   616  GETIMPORT      R7 = import_cache(d=101) chain=import(const#100) aux=0x46400000
+  L    0   618  GETIMPORT      R8 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L    0   620  NAMECALL       R8, R8, atom(c4f78a8f)
+  L    0   622  CALL           R8, R2, R2
+  L    0   623  LOADB          R9 = True
+  L    0   624  CALL           R5, R5, R1
+  L    5   625  GETUPVAL       R6, R6
+  L    0   626  FASTCALL1      R90, R6, R2
+  L    0   627  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   629  CALL           R5, R2, R2
+  L    0   630  JUMPIF         R5, pc=655
+  L    1   631  GETIMPORT      R5 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0   633  LOADB          R6 = True
+  L    0   634  SETTABLEKS     R6, R5, str_ref(#29)
+  L    1   636  GETIMPORT      R5 = import_cache(d=82) chain=import(const#81) aux=0x45100000
+  L -379   638  GETUPVAL       R7, R15
+  L    0   639  GETTABLEKS     R6, R7, atom(5f71328d = ShouldForceInteractDisable)
+  L    0   641  GETIMPORT      R7 = import_cache(d=109) chain=import(const#108) aux=0x46c00000
+  L    0   643  GETIMPORT      R8 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0   645  CALL           R7, R2, R0
+  L    0   646  CALL           R6, R0, R2
+  L    0   647  JUMPIFNOT      R6, pc=652
+  L    1   648  NAMECALL       R6, R5, atom(c8f4d8f6 = Disable)
+  L    0   650  CALL           R6, R2, R1
+  L    1   651  JUMP           pc=655
+  L    2   652  NAMECALL       R6, R5, atom(6266f538 = Enable)
+  L    0   654  CALL           R6, R2, R1
+  L  378   655  GETIMPORT      R5 = import_cache(d=12) chain=import(const#11) aux=0x40b00000
+  L    0   657  JUMPIFNOT      R5, pc=677
+  L    1   658  GETIMPORT      R5 = import_cache(d=82) chain=import(const#81) aux=0x45100000
+  L -383   660  GETUPVAL       R7, R15
+  L    0   661  GETTABLEKS     R6, R7, atom(5f71328d = ShouldForceInteractDisable)
+  L    0   663  GETIMPORT      R7 = import_cache(d=109) chain=import(const#108) aux=0x46c00000
+  L    0   665  GETIMPORT      R8 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0   667  CALL           R7, R2, R0
+  L    0   668  CALL           R6, R0, R2
+  L    0   669  JUMPIFNOT      R6, pc=674
+  L    1   670  NAMECALL       R6, R5, atom(c8f4d8f6 = Disable)
+  L    0   672  CALL           R6, R2, R1
+  L    1   673  JUMP           pc=677
+  L    2   674  NAMECALL       R6, R5, atom(6266f538 = Enable)
+  L    0   676  CALL           R6, R2, R1
+  L  382   677  GETIMPORT      R6 = import_cache(d=112) chain=import(const#111) aux=0x46f00000
+  L    0   679  FASTCALL1      R90, R6, R2
+  L    0   680  GETIMPORT      R5 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   682  CALL           R5, R2, R2
+  L    0   683  JUMPIF         R5, pc=690
+  L    1   684  GETIMPORT      R5 = import_cache(d=112) chain=import(const#111) aux=0x46f00000
+  L    0   686  LOADK          R7 = K[39] = str_ref(#19)
+  L    0   687  NAMECALL       R5, R5, atom(060f1f46 = FirePort)
+  L    0   689  CALL           R5, R3, R1
+  L    3   690  GETIMPORT      R5 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0   692  LOADB          R6 = False
+  L    0   693  SETTABLEKS     R6, R5, str_ref(#16)
+  L    1   695  GETIMPORT      R5 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0   697  LOADNIL        R6
+  L    0   698  SETTABLEKS     R6, R5, str_ref(#14)
+  L -343   700  GETUPVAL       R6, R3
+  L    0   701  GETTABLEKS     R5, R6, atom(a470273d = RemoveSparrowDestination)
+  L    0   703  LOADNIL        R6
+  L    0   704  LOADK          R8 = K[19] = str_ref(#2)
+  L    0   705  LOADN          R10 = 1
+  L    0   706  FASTCALL1      R63, R10, R2
+  L    0   707  GETIMPORT      R9 = import_cache(d=115) chain=import(const#114) aux=0x47200000
+  L    0   709  CALL           R9, R2, R2
+  L    0   710  CONCAT         R7, R8, R9
+  L    0   711  CALL           R5, R3, R1
+  L    0   712  GETUPVAL       R6, R3
+  L    0   713  GETTABLEKS     R5, R6, atom(a470273d = RemoveSparrowDestination)
+  L    0   715  LOADNIL        R6
+  L    0   716  LOADK          R8 = K[19] = str_ref(#2)
+  L    0   717  LOADN          R10 = 2
+  L    0   718  FASTCALL1      R63, R10, R2
+  L    0   719  GETIMPORT      R9 = import_cache(d=115) chain=import(const#114) aux=0x47200000
+  L    0   721  CALL           R9, R2, R2
+  L    0   722  CONCAT         R7, R8, R9
+  L    0   723  CALL           R5, R3, R1
+  L    0   724  GETUPVAL       R6, R3
+  L    0   725  GETTABLEKS     R5, R6, atom(a470273d = RemoveSparrowDestination)
+  L    0   727  LOADNIL        R6
+  L    0   728  LOADK          R8 = K[19] = str_ref(#2)
+  L    0   729  LOADN          R10 = 3
+  L    0   730  FASTCALL1      R63, R10, R2
+  L    0   731  GETIMPORT      R9 = import_cache(d=115) chain=import(const#114) aux=0x47200000
+  L    0   733  CALL           R9, R2, R2
+  L    0   734  CONCAT         R7, R8, R9
+  L    0   735  CALL           R5, R3, R1
+  L  345   736  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p11  stack=7 params=0 upvalues=8 varargs=0 flags=0 line=506
+  -- constants (35):
+  --   K[  0] atom           = atom(7e8ad928)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] string_ref     = str_ref(#30)
+  --   K[  3] atom           = atom(ae3ffccd = gRegion)
+  --   K[  4] import         = import(const#3)
+  --   K[  5] atom           = atom(f7b52061 = ancestorDecoTag)
+  --   K[  6] import         = import(const#5)
+  --   K[  7] atom           = atom(0a6a5887)
+  --   K[  8] atom           = atom(4fe19574 = LogBug)
+  --   K[  9] import         = import(const#8)
+  --   K[ 10] string_ref     = str_ref(#31)
+  --   K[ 11] atom           = atom(78eef496 = c_str)
+  --   K[ 12] string_ref     = str_ref(#32)
+  --   K[ 13] atom           = atom(dc5e03df = ancestorPositionTags)
+  --   K[ 14] import         = import(const#13)
+  --   K[ 15] atom           = atom(c155445b = math)
+  --   K[ 16] atom           = atom(90b66d78 = random)
+  --   K[ 17] import         = import(const#15.const#16)
+  --   K[ 18] atom           = atom(9afba2d5 = GetPosition)
+  --   K[ 19] atom           = atom(dc309f8a)
+  --   K[ 20] atom           = atom(cd866e6b = Teleport)
+  --   K[ 21] atom           = atom(4cf07eb9 = PlayTriggeredAnim)
+  --   K[ 22] atom           = atom(6b0b7ada = next)
+  --   K[ 23] import         = import(const#22)
+  --   K[ 24] atom           = atom(64c9fcb8 = vendorInteract)
+  --   K[ 25] import         = import(const#24)
+  --   K[ 26] atom           = atom(5f71328d = ShouldForceInteractDisable)
+  --   K[ 27] atom           = atom(de89c50a = WeakResource)
+  --   K[ 28] import         = import(const#27)
+  --   K[ 29] atom           = atom(860b110e = vendorAncestorRes)
+  --   K[ 30] import         = import(const#29)
+  --   K[ 31] atom           = atom(c8f4d8f6 = Disable)
+  --   K[ 32] atom           = atom(6266f538 = Enable)
+  --   K[ 33] atom           = atom(6ead47ac = SetVisibility)
+  --   K[ 34] atom           = atom(68f2c268)
+  L  507     0  GETUPVAL       R1, R0
+  L    0     1  FASTCALL1      R90, R1, R2
+  L    0     2  GETIMPORT      R0 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0     4  CALL           R0, R2, R2
+  L    0     5  JUMPIF         R0, pc=168
+  L    0     6  GETUPVAL       R1, R0
+  L    0     7  GETTABLEKS     R0, R1, str_ref(#30)
+  L    0     9  LOADN          R1 = 0
+  L    0    10  JUMPIFNOTLE    R1, R0, pc=168
+  L    1    12  GETIMPORT      R0 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L    0    14  GETIMPORT      R2 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L    0    16  NAMECALL       R0, R0, atom(0a6a5887)
+  L    0    18  CALL           R0, R3, R2
+  L    0    19  SETUPVAL       R0, R1
+  L    2    20  GETUPVAL       R1, R1
+  L    0    21  FASTCALL1      R90, R1, R2
+  L    0    22  GETIMPORT      R0 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0    24  CALL           R0, R2, R2
+  L    0    25  JUMPIFNOT      R0, pc=39
+  L    1    26  GETIMPORT      R0 = import_cache(d=9) chain=import(const#8) aux=0x40800000
+  L    0    28  LOADK          R2 = K[10] = str_ref(#31)
+  L    0    29  GETIMPORT      R5 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L    0    31  NAMECALL       R5, R5, atom(78eef496 = c_str)
+  L    0    33  CALL           R5, R2, R2
+  L    0    34  MOVE           R3, R5
+  L    0    35  LOADK          R4 = K[12] = str_ref(#32)
+  L    0    36  CONCAT         R1, R2, R4
+  L    0    37  CALL           R0, R2, R1
+  L    1    38  RETURN         R0, R1, R0
+  L    3    39  GETIMPORT      R1 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0    41  LENGTH         R0, R1
+  L    0    42  LOADN          R1 = 1
+  L    0    43  JUMPIFNOTLT    R1, R0, pc=78
+  L    2    45  GETIMPORT      R1 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0    47  GETIMPORT      R2 = import_cache(d=17) chain=import(const#15.const#16) aux=0x80f04000
+  L    0    49  LOADN          R3 = 1
+  L    0    50  GETIMPORT      R5 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0    52  LENGTH         R4, R5
+  L    0    53  CALL           R2, R3, R2
+  L    0    54  GETTABLE       R0, R1, R2
+  L    0    55  SETUPVAL       R0, R2
+  L    2    56  GETUPVAL       R1, R4
+  L    0    57  GETUPVAL       R2, R2
+  L    0    58  GETTABLE       R0, R1, R2
+  L    0    59  SETUPVAL       R0, R3
+  L    2    60  GETUPVAL       R0, R1
+  L    0    61  GETUPVAL       R2, R3
+  L    0    62  NAMECALL       R2, R2, atom(9afba2d5 = GetPosition)
+  L    0    64  CALL           R2, R2, R2
+  L    0    65  GETUPVAL       R3, R3
+  L    0    66  NAMECALL       R3, R3, atom(dc309f8a)
+  L    0    68  CALL           R3, R2, R0
+  L    0    69  NAMECALL       R0, R0, atom(cd866e6b = Teleport)
+  L    0    71  CALL           R0, R0, R1
+  L    2    72  GETUPVAL       R0, R1
+  L    0    73  GETUPVAL       R2, R2
+  L    0    74  NAMECALL       R0, R0, atom(4cf07eb9 = PlayTriggeredAnim)
+  L    0    76  CALL           R0, R3, R1
+  L    0    77  JUMP           pc=129
+  L    3    78  GETIMPORT      R0 = import_cache(d=23) chain=import(const#22) aux=0x41600000
+  L    0    80  GETIMPORT      R1 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0    82  CALL           R0, R2, R2
+  L    0    83  JUMPXEQKNIL    R0, pc=109, not=True
+  L    1    85  GETUPVAL       R0, R5
+  L    0    86  GETUPVAL       R1, R1
+  L    0    87  LOADN          R2 = 0
+  L    0    88  CALL           R0, R3, R1
+  L    3    89  GETIMPORT      R0 = import_cache(d=25) chain=import(const#24) aux=0x41800000
+  L -420    91  GETUPVAL       R2, R6
+  L    0    92  GETTABLEKS     R1, R2, atom(5f71328d = ShouldForceInteractDisable)
+  L    0    94  GETIMPORT      R2 = import_cache(d=28) chain=import(const#27) aux=0x41b00000
+  L    0    96  GETIMPORT      R3 = import_cache(d=30) chain=import(const#29) aux=0x41d00000
+  L    0    98  CALL           R2, R2, R0
+  L    0    99  CALL           R1, R0, R2
+  L    0   100  JUMPIFNOT      R1, pc=105
+  L    1   101  NAMECALL       R1, R0, atom(c8f4d8f6 = Disable)
+  L    0   103  CALL           R1, R2, R1
+  L    1   104  RETURN         R0, R1, R0
+  L    2   105  NAMECALL       R1, R0, atom(6266f538 = Enable)
+  L    0   107  CALL           R1, R2, R1
+  L  417   108  RETURN         R0, R1, R0
+  L    2   109  GETIMPORT      R1 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L    0   111  GETTABLEN      R0, R1, R0
+  L    0   112  SETUPVAL       R0, R2
+  L    1   113  GETUPVAL       R1, R4
+  L    0   114  GETUPVAL       R2, R2
+  L    0   115  GETTABLE       R0, R1, R2
+  L    0   116  SETUPVAL       R0, R3
+  L    1   117  GETUPVAL       R0, R1
+  L    0   118  GETUPVAL       R2, R3
+  L    0   119  NAMECALL       R2, R2, atom(9afba2d5 = GetPosition)
+  L    0   121  CALL           R2, R2, R2
+  L    0   122  GETUPVAL       R3, R3
+  L    0   123  NAMECALL       R3, R3, atom(dc309f8a)
+  L    0   125  CALL           R3, R2, R0
+  L    0   126  NAMECALL       R0, R0, atom(cd866e6b = Teleport)
+  L    0   128  CALL           R0, R0, R1
+  L    3   129  GETUPVAL       R1, R7
+  L    0   130  FASTCALL1      R90, R1, R2
+  L    0   131  GETIMPORT      R0 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0   133  CALL           R0, R2, R2
+  L    0   134  JUMPIF         R0, pc=145
+  L    1   135  GETUPVAL       R0, R7
+  L    0   136  LOADB          R2 = True
+  L    0   137  NAMECALL       R0, R0, atom(6ead47ac = SetVisibility)
+  L    0   139  CALL           R0, R3, R1
+  L    1   140  GETUPVAL       R0, R7
+  L    0   141  LOADN          R2 = 0
+  L    0   142  NAMECALL       R0, R0, atom(68f2c268)
+  L    0   144  CALL           R0, R3, R1
+  L    2   145  GETUPVAL       R0, R5
+  L    0   146  GETUPVAL       R1, R1
+  L    0   147  LOADN          R2 = 0
+  L    0   148  CALL           R0, R3, R1
+  L    3   149  GETIMPORT      R0 = import_cache(d=25) chain=import(const#24) aux=0x41800000
+  L -435   151  GETUPVAL       R2, R6
+  L    0   152  GETTABLEKS     R1, R2, atom(5f71328d = ShouldForceInteractDisable)
+  L    0   154  GETIMPORT      R2 = import_cache(d=28) chain=import(const#27) aux=0x41b00000
+  L    0   156  GETIMPORT      R3 = import_cache(d=30) chain=import(const#29) aux=0x41d00000
+  L    0   158  CALL           R2, R2, R0
+  L    0   159  CALL           R1, R0, R2
+  L    0   160  JUMPIFNOT      R1, pc=165
+  L    1   161  NAMECALL       R1, R0, atom(c8f4d8f6 = Disable)
+  L    0   163  CALL           R1, R2, R1
+  L    1   164  RETURN         R0, R1, R0
+  L    2   165  NAMECALL       R1, R0, atom(6266f538 = Enable)
+  L    0   167  CALL           R1, R2, R1
+  L  433   168  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p12  stack=11 params=0 upvalues=1 varargs=0 flags=0 line=549
+  -- constants (27):
+  --   K[  0] atom           = atom(e93b649c = print)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] string_ref     = str_ref(#33)
+  --   K[  3] atom           = atom(26334b20 = gGameData)
+  --   K[  4] import         = import(const#3)
+  --   K[  5] atom           = atom(6a31e3af = GetInventory)
+  --   K[  6] atom           = atom(7e8ad928)
+  --   K[  7] import         = import(const#6)
+  --   K[  8] atom           = atom(6b29f1ed)
+  --   K[  9] atom           = atom(07f0ada8 = ipairs)
+  --   K[ 10] import         = import(const#9)
+  --   K[ 11] string_ref     = str_ref(#34)
+  --   K[ 12] atom           = atom(00c2afc8 = giftItemType)
+  --   K[ 13] import         = import(const#12)
+  --   K[ 14] atom           = atom(f0c536fb = Engine)
+  --   K[ 15] atom           = atom(db2b0cee)
+  --   K[ 16] import         = import(const#14.const#15)
+  --   K[ 17] string_ref     = str_ref(#35)
+  --   K[ 18] atom           = atom(f1a88c30)
+  --   K[ 19] atom           = atom(c92787ff = GetSecondElements)
+  --   K[ 20] atom           = atom(dcacce14 = giftPickupSwitch)
+  --   K[ 21] import         = import(const#20)
+  --   K[ 22] atom           = atom(6266f538 = Enable)
+  --   K[ 23] atom           = atom(c8f4d8f6 = Disable)
+  --   K[ 24] atom           = atom(574653c8 = giftDeco)
+  --   K[ 25] import         = import(const#24)
+  --   K[ 26] atom           = atom(6ead47ac = SetVisibility)
+  L  550     0  GETIMPORT      R0 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  550     2  LOADK          R1 = K[2] = str_ref(#33)
+  L  550     3  CALL           R0, R2, R1
+  L  551     4  GETIMPORT      R0 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  550     6  NAMECALL       R0, R0, atom(6a31e3af = GetInventory)
+  L  550     8  CALL           R0, R2, R2
+  L  551     9  FASTCALL1      R90, R0, R3
+  L  550    10  MOVE           R2, R0
+  L  550    11  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  550    13  CALL           R1, R2, R2
+  L  550    14  JUMPIFNOT      R1, pc=16
+  L  551    15  RETURN         R0, R1, R0
+  L  553    16  NAMECALL       R1, R0, atom(6b29f1ed)
+  L  550    18  CALL           R1, R2, R2
+  L  551    19  LOADB          R2 = True
+  L  552    20  GETIMPORT      R3 = import_cache(d=10) chain=import(const#9) aux=0x40900000
+  L  550    22  MOVE           R4, R1
+  L  550    23  CALL           R3, R2, R4
+  L  550    24  FORGPREP_INEXT R3, pc=50
+  L  551    25  GETTABLEKS     R8, R7, str_ref(#34)
+  L  550    27  GETIMPORT      R9 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L  550    29  JUMPIFNOTEQ    R8, R9, pc=50
+  L  551    31  GETIMPORT      R8 = import_cache(d=16) chain=import(const#14.const#15) aux=0x80e03c00
+  L  550    33  GETTABLEKS     R9, R7, str_ref(#35)
+  L  550    35  NAMECALL       R9, R9, atom(f1a88c30)
+  L  550    37  CALL           R9, R2, R0
+  L  550    38  CALL           R8, R0, R2
+  L  551    39  GETUPVAL       R10, R0
+  L  550    40  GETTABLEKS     R9, R10, atom(c92787ff = GetSecondElements)
+  L  550    42  MINUS          R10, R8
+  L  550    43  CALL           R9, R2, R2
+  L  551    44  LOADN          R10 = 1
+  L  550    45  JUMPIFLE       R10, R9, pc=48
+  L  550    47  LOADB          R2 = False  +1
+  L  550    48  LOADB          R2 = True
+  L  551    49  JUMP           pc=52
+  L  801    50  FORGLOOP       R3, pc=25, aux=0x80000002
+  L  559    52  GETIMPORT      R4 = import_cache(d=21) chain=import(const#20) aux=0x41400000
+  L  550    54  FASTCALL1      R90, R4, R2
+  L  550    55  GETIMPORT      R3 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  550    57  CALL           R3, R2, R2
+  L  550    58  JUMPIF         R3, pc=71
+  L  551    59  JUMPIFNOT      R2, pc=66
+  L  551    60  GETIMPORT      R3 = import_cache(d=21) chain=import(const#20) aux=0x41400000
+  L  550    62  NAMECALL       R3, R3, atom(6266f538 = Enable)
+  L  550    64  CALL           R3, R2, R1
+  L  550    65  JUMP           pc=71
+  L  552    66  GETIMPORT      R3 = import_cache(d=21) chain=import(const#20) aux=0x41400000
+  L  550    68  NAMECALL       R3, R3, atom(c8f4d8f6 = Disable)
+  L  550    70  CALL           R3, R2, R1
+  L  554    71  GETIMPORT      R4 = import_cache(d=25) chain=import(const#24) aux=0x41800000
+  L  550    73  FASTCALL1      R90, R4, R2
+  L  550    74  GETIMPORT      R3 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  550    76  CALL           R3, R2, R2
+  L  550    77  JUMPIF         R3, pc=84
+  L  551    78  GETIMPORT      R3 = import_cache(d=25) chain=import(const#24) aux=0x41800000
+  L  550    80  MOVE           R5, R2
+  L  550    81  NAMECALL       R3, R3, atom(6ead47ac = SetVisibility)
+  L  550    83  CALL           R3, R3, R1
+  L  552    84  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p13  stack=6 params=1 upvalues=3 varargs=0 flags=0 line=581
+  -- constants (20):
+  --   K[  0] atom           = atom(712cbb48 = GetLocalPlayerAncestorOfType)
+  --   K[  1] atom           = atom(7e8ad928)
+  --   K[  2] import         = import(const#1)
+  --   K[  3] atom           = atom(0f6eab5e = HasPersonalCompletedQuest)
+  --   K[  4] atom           = atom(9738659b = discoveryQuestType)
+  --   K[  5] import         = import(const#4)
+  --   K[  6] atom           = atom(e93b649c = print)
+  --   K[  7] import         = import(const#6)
+  --   K[  8] string_ref     = str_ref(#36)
+  --   K[  9] atom           = atom(09f3e2f4 = Sleep)
+  --   K[ 10] import         = import(const#9)
+  --   K[ 11] number         = num(0.5)
+  --   K[ 12] atom           = atom(26334b20 = gGameData)
+  --   K[ 13] import         = import(const#12)
+  --   K[ 14] string_ref     = str_ref(#37)
+  --   K[ 15] atom           = atom(c294a599 = RankUpAncestor)
+  --   K[ 16] atom           = atom(4b5cc836 = IsInNightFold)
+  --   K[ 17] atom           = atom(ae3ffccd = gRegion)
+  --   K[ 18] import         = import(const#17)
+  --   K[ 19] atom           = atom(c4f78a8f)
+  L  582     0  GETUPVAL       R2, R0
+  L  582     1  GETTABLEKS     R1, R2, atom(712cbb48 = GetLocalPlayerAncestorOfType)
+  L  582     3  MOVE           R2, R0
+  L  582     4  LOADB          R3 = True
+  L  582     5  CALL           R1, R3, R2
+  L  585     6  FASTCALL1      R90, R1, R3
+  L  582     7  MOVE           R3, R1
+  L  582     8  GETIMPORT      R2 = import_cache(d=2) chain=import(const#1) aux=0x40100000
+  L  582    10  CALL           R2, R2, R2
+  L  582    11  JUMPIFNOT      R2, pc=62
+  L  582    12  GETUPVAL       R3, R1
+  L  582    13  GETTABLEKS     R2, R3, atom(0f6eab5e = HasPersonalCompletedQuest)
+  L  582    15  GETIMPORT      R3 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L  582    17  CALL           R2, R2, R2
+  L  582    18  JUMPIFNOT      R2, pc=62
+  L  583    19  GETIMPORT      R2 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L  582    21  LOADK          R3 = K[8] = str_ref(#36)
+  L  582    22  CALL           R2, R2, R1
+  L  583    23  GETIMPORT      R2 = import_cache(d=10) chain=import(const#9) aux=0x40900000
+  L  582    25  LOADK          R3 = K[11] = num(0.5)
+  L  582    26  CALL           R2, R2, R1
+  L  583    27  GETIMPORT      R2 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L  582    29  MOVE           R4, R0
+  L  582    30  LOADK          R5 = K[14] = str_ref(#37)
+  L  582    31  NAMECALL       R2, R2, atom(c294a599 = RankUpAncestor)
+  L  582    33  CALL           R2, R4, R1
+  L  583    34  FASTCALL1      R90, R1, R3
+  L  582    35  MOVE           R3, R1
+  L  582    36  GETIMPORT      R2 = import_cache(d=2) chain=import(const#1) aux=0x40100000
+  L  582    38  CALL           R2, R2, R2
+  L  582    39  JUMPIFNOT      R2, pc=62
+  L  583    40  GETUPVAL       R3, R0
+  L  582    41  GETTABLEKS     R2, R3, atom(712cbb48 = GetLocalPlayerAncestorOfType)
+  L  582    43  MOVE           R3, R0
+  L  582    44  LOADB          R4 = True
+  L  582    45  CALL           R2, R3, R2
+  L  582    46  MOVE           R1, R2
+  L  583    47  GETIMPORT      R2 = import_cache(d=10) chain=import(const#9) aux=0x40900000
+  L  582    49  LOADK          R3 = K[11] = num(0.5)
+  L  582    50  CALL           R2, R2, R1
+  L  583    51  GETUPVAL       R3, R2
+  L  582    52  GETTABLEKS     R2, R3, atom(4b5cc836 = IsInNightFold)
+  L  582    54  GETIMPORT      R3 = import_cache(d=18) chain=import(const#17) aux=0x41100000
+  L  582    56  NAMECALL       R3, R3, atom(c4f78a8f)
+  L  582    58  CALL           R3, R2, R0
+  L  582    59  CALL           R2, R0, R2
+  L  582    60  JUMPIFNOT      R2, pc=62
+  L  835    61  JUMPBACK       pc=34
+  L  590    62  RETURN         R1, R2, R0
+end
+
+-- ============================================================
+function p14  stack=3 params=0 upvalues=3 varargs=0 flags=0 line=600
+  -- constants (21):
+  --   K[  0] atom           = atom(f0bf8ede = _T)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] string_ref     = str_ref(#16)
+  --   K[  3] atom           = atom(6b0b7ada = next)
+  --   K[  4] import         = import(const#3)
+  --   K[  5] atom           = atom(ae3ffccd = gRegion)
+  --   K[  6] import         = import(const#5)
+  --   K[  7] atom           = atom(3c8cb70f = vendorLightTag)
+  --   K[  8] import         = import(const#7)
+  --   K[  9] atom           = atom(2226b35c)
+  --   K[ 10] atom           = atom(0ae54f4d = vendorFxTag)
+  --   K[ 11] import         = import(const#10)
+  --   K[ 12] atom           = atom(75c6cac9 = lookAtRevealTrigger)
+  --   K[ 13] import         = import(const#12)
+  --   K[ 14] atom           = atom(7e8ad928)
+  --   K[ 15] import         = import(const#14)
+  --   K[ 16] atom           = atom(09f3e2f4 = Sleep)
+  --   K[ 17] import         = import(const#16)
+  --   K[ 18] atom           = atom(2d59d4cc = stationRevealDelay)
+  --   K[ 19] import         = import(const#18)
+  --   K[ 20] string_ref     = str_ref(#38)
+  L  601     0  GETIMPORT      R0 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  601     2  LOADB          R1 = False
+  L  601     3  SETTABLEKS     R1, R0, str_ref(#16)
+  L  603     5  GETIMPORT      R0 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  601     7  GETUPVAL       R1, R0
+  L  601     8  CALL           R0, R2, R2
+  L  601     9  JUMPXEQKNIL    R0, pc=19, not=True
+  L  602    11  GETIMPORT      R0 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  601    13  GETIMPORT      R2 = import_cache(d=8) chain=import(const#7) aux=0x40700000
+  L  601    15  NAMECALL       R0, R0, atom(2226b35c)
+  L  601    17  CALL           R0, R3, R2
+  L  601    18  SETUPVAL       R0, R0
+  L  603    19  GETIMPORT      R0 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  601    21  GETUPVAL       R1, R1
+  L  601    22  CALL           R0, R2, R2
+  L  601    23  JUMPXEQKNIL    R0, pc=33, not=True
+  L  602    25  GETIMPORT      R0 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  601    27  GETIMPORT      R2 = import_cache(d=11) chain=import(const#10) aux=0x40a00000
+  L  601    29  NAMECALL       R0, R0, atom(2226b35c)
+  L  601    31  CALL           R0, R3, R2
+  L  601    32  SETUPVAL       R0, R1
+  L  604    33  GETUPVAL       R0, R2
+  L  601    34  LOADB          R1 = True
+  L  601    35  CALL           R0, R2, R1
+  L  602    36  GETIMPORT      R1 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L  601    38  FASTCALL1      R90, R1, R2
+  L  601    39  GETIMPORT      R0 = import_cache(d=15) chain=import(const#14) aux=0x40e00000
+  L  601    41  CALL           R0, R2, R2
+  L  601    42  JUMPIFNOT      R0, pc=51
+  L  602    43  GETIMPORT      R0 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L  601    45  GETIMPORT      R1 = import_cache(d=19) chain=import(const#18) aux=0x41200000
+  L  601    47  CALL           R0, R2, R1
+  L  602    48  GETGLOBAL      R0, str_ref(#38)
+  L  601    50  CALL           R0, R1, R1
+  L  603    51  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p15  stack=13 params=0 upvalues=14 varargs=0 flags=0 line=618
+  -- constants (80):
+  --   K[  0] atom           = atom(257c643d = WaitForLevel)
+  --   K[  1] atom           = atom(f0bf8ede = _T)
+  --   K[  2] import         = import(const#1)
+  --   K[  3] string_ref     = str_ref(#16)
+  --   K[  4] atom           = atom(860b110e = vendorAncestorRes)
+  --   K[  5] import         = import(const#4)
+  --   K[  6] atom           = atom(7e8ad928)
+  --   K[  7] import         = import(const#6)
+  --   K[  8] atom           = atom(e93b649c = print)
+  --   K[  9] import         = import(const#8)
+  --   K[ 10] string_ref     = str_ref(#39)
+  --   K[ 11] string_ref     = str_ref(#40)
+  --   K[ 12] atom           = atom(ae3ffccd = gRegion)
+  --   K[ 13] import         = import(const#12)
+  --   K[ 14] atom           = atom(f7b52061 = ancestorDecoTag)
+  --   K[ 15] import         = import(const#14)
+  --   K[ 16] atom           = atom(0a6a5887)
+  --   K[ 17] atom           = atom(839dbdde = heirloomDecoTag)
+  --   K[ 18] import         = import(const#17)
+  --   K[ 19] atom           = atom(6b0b7ada = next)
+  --   K[ 20] import         = import(const#19)
+  --   K[ 21] atom           = atom(3c8cb70f = vendorLightTag)
+  --   K[ 22] import         = import(const#21)
+  --   K[ 23] atom           = atom(2226b35c)
+  --   K[ 24] atom           = atom(0ae54f4d = vendorFxTag)
+  --   K[ 25] import         = import(const#24)
+  --   K[ 26] atom           = atom(dc5e03df = ancestorPositionTags)
+  --   K[ 27] import         = import(const#26)
+  --   K[ 28] atom           = atom(49f62ae9 = ShouldForceStationReveal)
+  --   K[ 29] atom           = atom(de89c50a = WeakResource)
+  --   K[ 30] import         = import(const#29)
+  --   K[ 31] atom           = atom(e6ad54bc = ShouldForceHideStation)
+  --   K[ 32] atom           = atom(f4be1145 = useSimpleHide)
+  --   K[ 33] import         = import(const#32)
+  --   K[ 34] string_ref     = str_ref(#41)
+  --   K[ 35] string_ref     = str_ref(#30)
+  --   K[ 36] number         = num(-1.0)
+  --   K[ 37] string_ref     = str_ref(#1)
+  --   K[ 38] import         = import(const#1.const#37)
+  --   K[ 39] atom           = atom(c0ec49e8 = vendorStationDecoInstance)
+  --   K[ 40] import         = import(const#39)
+  --   K[ 41] atom           = atom(61c1cfe2 = DissolveIn)
+  --   K[ 42] atom           = atom(64c9fcb8 = vendorInteract)
+  --   K[ 43] import         = import(const#42)
+  --   K[ 44] atom           = atom(5f71328d = ShouldForceInteractDisable)
+  --   K[ 45] atom           = atom(c8f4d8f6 = Disable)
+  --   K[ 46] atom           = atom(6266f538 = Enable)
+  --   K[ 47] atom           = atom(7ecabe9c = EnableTaggedSequencers)
+  --   K[ 48] atom           = atom(8659e708 = Symbol)
+  --   K[ 49] import         = import(const#48)
+  --   K[ 50] string_ref     = str_ref(#28)
+  --   K[ 51] string_ref     = str_ref(#10)
+  --   K[ 52] string_ref     = str_ref(#23)
+  --   K[ 53] atom           = atom(5b41f63b)
+  --   K[ 54] atom           = atom(75c6cac9 = lookAtRevealTrigger)
+  --   K[ 55] import         = import(const#54)
+  --   K[ 56] atom           = atom(09f3e2f4 = Sleep)
+  --   K[ 57] import         = import(const#56)
+  --   K[ 58] atom           = atom(2d59d4cc = stationRevealDelay)
+  --   K[ 59] import         = import(const#58)
+  --   K[ 60] string_ref     = str_ref(#38)
+  --   K[ 61] atom           = atom(bb4db8fe = rankUpScriptTrigger)
+  --   K[ 62] import         = import(const#61)
+  --   K[ 63] atom           = atom(c09dcfb2 = TaggedFirePorts)
+  --   K[ 64] string_ref     = str_ref(#42)
+  --   K[ 65] atom           = atom(717cddbf = vendorVisibleDecoAnim)
+  --   K[ 66] import         = import(const#65)
+  --   K[ 67] atom           = atom(7b7015c9)
+  --   K[ 68] atom           = atom(be0bea4a)
+  --   K[ 69] atom           = atom(6ead47ac = SetVisibility)
+  --   K[ 70] atom           = atom(3eda9895 = tagsToKeepHidden)
+  --   K[ 71] import         = import(const#70)
+  --   K[ 72] atom           = atom(03c2ed1f = vendorActiveSFXTag)
+  --   K[ 73] import         = import(const#72)
+  --   K[ 74] string_ref     = str_ref(#19)
+  --   K[ 75] atom           = atom(84581466 = ancestorInitializationMethod)
+  --   K[ 76] import         = import(const#75)
+  --   K[ 77] string_ref     = str_ref(#43)
+  --   K[ 78] atom           = atom(8a035cd5)
+  --   K[ 79] string_ref     = str_ref(#44)
+  L  619     0  GETUPVAL       R1, R0
+  L    0     1  GETTABLEKS     R0, R1, atom(257c643d = WaitForLevel)
+  L    0     3  CALL           R0, R1, R1
+  L    2     4  GETIMPORT      R0 = import_cache(d=2) chain=import(const#1) aux=0x40100000
+  L    0     6  LOADB          R1 = False
+  L    0     7  SETTABLEKS     R1, R0, str_ref(#16)
+  L    1     9  GETIMPORT      R1 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L    0    11  FASTCALL1      R90, R1, R2
+  L    0    12  GETIMPORT      R0 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0    14  CALL           R0, R2, R2
+  L    0    15  JUMPIFNOT      R0, pc=21
+  L    1    16  GETIMPORT      R0 = import_cache(d=9) chain=import(const#8) aux=0x40800000
+  L    0    18  LOADK          R1 = K[10] = str_ref(#39)
+  L    0    19  CALL           R0, R2, R1
+  L    1    20  RETURN         R0, R1, R0
+  L    2    21  GETGLOBAL      R0, str_ref(#40)
+  L    0    23  GETIMPORT      R1 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L    0    25  CALL           R0, R2, R2
+  L    0    26  SETUPVAL       R0, R1
+  L    1    27  GETIMPORT      R0 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L    0    29  GETIMPORT      R2 = import_cache(d=15) chain=import(const#14) aux=0x40e00000
+  L    0    31  NAMECALL       R0, R0, atom(0a6a5887)
+  L    0    33  CALL           R0, R3, R2
+  L    0    34  SETUPVAL       R0, R2
+  L    1    35  GETIMPORT      R0 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L    0    37  GETIMPORT      R2 = import_cache(d=18) chain=import(const#17) aux=0x41100000
+  L    0    39  NAMECALL       R0, R0, atom(0a6a5887)
+  L    0    41  CALL           R0, R3, R2
+  L    0    42  SETUPVAL       R0, R3
+  L    2    43  GETIMPORT      R0 = import_cache(d=20) chain=import(const#19) aux=0x41300000
+  L    0    45  GETUPVAL       R1, R4
+  L    0    46  CALL           R0, R2, R2
+  L    0    47  JUMPXEQKNIL    R0, pc=57, not=True
+  L    1    49  GETIMPORT      R0 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L    0    51  GETIMPORT      R2 = import_cache(d=22) chain=import(const#21) aux=0x41500000
+  L    0    53  NAMECALL       R0, R0, atom(2226b35c)
+  L    0    55  CALL           R0, R3, R2
+  L    0    56  SETUPVAL       R0, R4
+  L    2    57  GETIMPORT      R0 = import_cache(d=20) chain=import(const#19) aux=0x41300000
+  L    0    59  GETUPVAL       R1, R5
+  L    0    60  CALL           R0, R2, R2
+  L    0    61  JUMPXEQKNIL    R0, pc=71, not=True
+  L    1    63  GETIMPORT      R0 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L    0    65  GETIMPORT      R2 = import_cache(d=25) chain=import(const#24) aux=0x41800000
+  L    0    67  NAMECALL       R0, R0, atom(2226b35c)
+  L    0    69  CALL           R0, R3, R2
+  L    0    70  SETUPVAL       R0, R5
+  L    2    71  GETIMPORT      R0 = import_cache(d=20) chain=import(const#19) aux=0x41300000
+  L    0    73  GETUPVAL       R1, R6
+  L    0    74  CALL           R0, R2, R2
+  L    0    75  JUMPXEQKNIL    R0, pc=97, not=True
+  L    1    77  LOADN          R2 = 1
+  L    0    78  GETIMPORT      R3 = import_cache(d=27) chain=import(const#26) aux=0x41a00000
+  L    0    80  LENGTH         R0, R3
+  L    0    81  LOADN          R1 = 1
+  L    0    82  FORNPREP       R0, pc=97
+  L    1    83  GETUPVAL       R3, R6
+  L    0    84  GETIMPORT      R5 = import_cache(d=27) chain=import(const#26) aux=0x41a00000
+  L    0    86  GETTABLE       R4, R5, R2
+  L    0    87  GETIMPORT      R5 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L    0    89  GETIMPORT      R8 = import_cache(d=27) chain=import(const#26) aux=0x41a00000
+  L    0    91  GETTABLE       R7, R8, R2
+  L    0    92  NAMECALL       R5, R5, atom(0a6a5887)
+  L    0    94  CALL           R5, R3, R2
+  L    0    95  SETTABLE       R5, R3, R4
+  L   -1    96  FORNLOOP       R0, pc=83
+  L   27    97  GETUPVAL       R1, R1
+  L    0    98  FASTCALL1      R90, R1, R2
+  L    0    99  GETIMPORT      R0 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   101  CALL           R0, R2, R2
+  L    0   102  JUMPIFNOT      R0, pc=112
+  L    0   103  GETUPVAL       R1, R7
+  L    0   104  GETTABLEKS     R0, R1, atom(49f62ae9 = ShouldForceStationReveal)
+  L    0   106  GETIMPORT      R1 = import_cache(d=30) chain=import(const#29) aux=0x41d00000
+  L    0   108  GETIMPORT      R2 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L    0   110  CALL           R1, R2, R0
+  L    0   111  CALL           R0, R0, R2
+  L    2   112  JUMPIF         R0, pc=119
+  L    0   113  GETUPVAL       R2, R1
+  L    0   114  FASTCALL1      R90, R2, R2
+  L    0   115  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   117  CALL           R1, R2, R2
+  L    0   118  JUMPIF         R1, pc=129
+  L    0   119  GETUPVAL       R2, R7
+  L    0   120  GETTABLEKS     R1, R2, atom(e6ad54bc = ShouldForceHideStation)
+  L    0   122  GETIMPORT      R2 = import_cache(d=30) chain=import(const#29) aux=0x41d00000
+  L    0   124  GETIMPORT      R3 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L    0   126  CALL           R2, R2, R0
+  L    0   127  CALL           R1, R0, R2
+  L    0   128  JUMPIFNOT      R1, pc=139
+  L    1   129  GETIMPORT      R1 = import_cache(d=33) chain=import(const#32) aux=0x42000000
+  L    0   131  JUMPIFNOT      R1, pc=136
+  L    1   132  GETGLOBAL      R1, str_ref(#41)
+  L    0   134  CALL           R1, R1, R1
+  L    0   135  RETURN         R0, R1, R0
+  L    2   136  GETUPVAL       R1, R8
+  L    0   137  CALL           R1, R1, R1
+  L    2   138  RETURN         R0, R1, R0
+  L    1   139  JUMPIF         R0, pc=145
+  L    0   140  GETUPVAL       R2, R1
+  L    0   141  GETTABLEKS     R1, R2, str_ref(#30)
+  L    0   143  JUMPXEQKN      R1, pc=262, k=num(-1.0), not=True
+  L -544   145  GETIMPORT      R3 = import_cache(d=38) chain=import(const#1.const#37) aux=0x80109400
+  L    0   147  FASTCALL1      R90, R3, R2
+  L    0   148  GETIMPORT      R2 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   150  CALL           R2, R2, R2
+  L    0   151  JUMPIF         R2, pc=172
+  L    0   152  GETIMPORT      R3 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L    0   154  FASTCALL1      R90, R3, R2
+  L    0   155  GETIMPORT      R2 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   157  CALL           R2, R2, R2
+  L    0   158  JUMPIF         R2, pc=172
+  L    1   159  GETIMPORT      R2 = import_cache(d=38) chain=import(const#1.const#37) aux=0x80109400
+  L    0   161  LOADNIL        R3
+  L    0   162  LOADNIL        R4
+  L    0   163  FORGPREP       R2, pc=170
+  L    1   164  GETIMPORT      R7 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L    0   166  JUMPIFNOTEQ    R6, R7, pc=170
+  L    1   168  LOADB          R1 = True
+  L    0   169  JUMP           pc=173
+  L   -2   170  FORGLOOP       R2, pc=164, aux=0x00000002
+  L    6   172  LOADB          R1 = False
+  L    0   173  JUMPIFNOT      R1, pc=213
+  L  539   174  GETUPVAL       R2, R9
+  L    0   175  GETTABLEKS     R1, R2, atom(61c1cfe2 = DissolveIn)
+  L    0   177  GETUPVAL       R2, R2
+  L    0   178  CALL           R1, R2, R1
+  L    1   179  GETIMPORT      R1 = import_cache(d=43) chain=import(const#42) aux=0x42a00000
+  L -566   181  GETUPVAL       R3, R7
+  L    0   182  GETTABLEKS     R2, R3, atom(5f71328d = ShouldForceInteractDisable)
+  L    0   184  GETIMPORT      R3 = import_cache(d=30) chain=import(const#29) aux=0x41d00000
+  L    0   186  GETIMPORT      R4 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L    0   188  CALL           R3, R2, R0
+  L    0   189  CALL           R2, R0, R2
+  L    0   190  JUMPIFNOT      R2, pc=195
+  L    1   191  NAMECALL       R2, R1, atom(c8f4d8f6 = Disable)
+  L    0   193  CALL           R2, R2, R1
+  L    1   194  JUMP           pc=198
+  L    2   195  NAMECALL       R2, R1, atom(6266f538 = Enable)
+  L    0   197  CALL           R2, R2, R1
+  L  563   198  GETUPVAL       R2, R10
+  L    0   199  GETTABLEKS     R1, R2, atom(7ecabe9c = EnableTaggedSequencers)
+  L    0   201  GETIMPORT      R2 = import_cache(d=49) chain=import(const#48) aux=0x43000000
+  L    0   203  LOADK          R3 = K[50] = str_ref(#28)
+  L    0   204  CALL           R2, R2, R2
+  L    0   205  LOADB          R3 = True
+  L    0   206  CALL           R1, R3, R1
+  L    1   207  GETIMPORT      R1 = import_cache(d=2) chain=import(const#1) aux=0x40100000
+  L    0   209  LOADB          R2 = True
+  L    0   210  SETTABLEKS     R2, R1, str_ref(#10)
+  L    1   212  RETURN         R0, R1, R0
+  L    2   213  GETUPVAL       R2, R1
+  L    0   214  FASTCALL1      R90, R2, R2
+  L    0   215  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   217  CALL           R1, R2, R2
+  L    0   218  JUMPIFNOT      R1, pc=243
+  L    0   219  GETUPVAL       R4, R11
+  L    0   220  GETTABLEKS     R3, R4, str_ref(#23)
+  L    0   222  GETIMPORT      R4 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L    0   224  NAMECALL       R4, R4, atom(5b41f63b)
+  L    0   226  CALL           R4, R2, R2
+  L    0   227  GETTABLE       R2, R3, R4
+  L    0   228  FASTCALL1      R90, R2, R2
+  L    0   229  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   231  CALL           R1, R2, R2
+  L    0   232  JUMPIF         R1, pc=243
+  L    1   233  GETUPVAL       R2, R11
+  L    0   234  GETTABLEKS     R1, R2, str_ref(#23)
+  L    0   236  GETIMPORT      R2 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L    0   238  NAMECALL       R2, R2, atom(5b41f63b)
+  L    0   240  CALL           R2, R2, R2
+  L    0   241  LOADB          R3 = True
+  L    0   242  SETTABLE       R3, R1, R2
+  L    2   243  GETUPVAL       R1, R8
+  L    0   244  LOADB          R2 = True
+  L    0   245  CALL           R1, R2, R1
+  L    1   246  GETIMPORT      R2 = import_cache(d=55) chain=import(const#54) aux=0x43600000
+  L    0   248  FASTCALL1      R90, R2, R2
+  L    0   249  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   251  CALL           R1, R2, R2
+  L    0   252  JUMPIFNOT      R1, pc=261
+  L    1   253  GETIMPORT      R1 = import_cache(d=57) chain=import(const#56) aux=0x43800000
+  L    0   255  GETIMPORT      R2 = import_cache(d=59) chain=import(const#58) aux=0x43a00000
+  L    0   257  CALL           R1, R2, R1
+  L    1   258  GETGLOBAL      R1, str_ref(#38)
+  L    0   260  CALL           R1, R1, R1
+  L    2   261  RETURN         R0, R1, R0
+  L    2   262  GETUPVAL       R2, R1
+  L    0   263  GETTABLEKS     R1, R2, str_ref(#30)
+  L    0   265  LOADN          R2 = 0
+  L    0   266  JUMPIFNOTLE    R2, R1, pc=418
+  L    1   268  GETIMPORT      R2 = import_cache(d=62) chain=import(const#61) aux=0x43d00000
+  L    0   270  FASTCALL1      R90, R2, R2
+  L    0   271  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   273  CALL           R1, R2, R2
+  L    0   274  JUMPIF         R1, pc=282
+  L    1   275  GETUPVAL       R2, R0
+  L    0   276  GETTABLEKS     R1, R2, atom(c09dcfb2 = TaggedFirePorts)
+  L    0   278  GETIMPORT      R2 = import_cache(d=62) chain=import(const#61) aux=0x43d00000
+  L    0   280  LOADK          R3 = K[64] = str_ref(#42)
+  L    0   281  CALL           R1, R3, R1
+  L -564   282  GETIMPORT      R3 = import_cache(d=38) chain=import(const#1.const#37) aux=0x80109400
+  L    0   284  FASTCALL1      R90, R3, R2
+  L    0   285  GETIMPORT      R2 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   287  CALL           R2, R2, R2
+  L    0   288  JUMPIF         R2, pc=309
+  L    0   289  GETIMPORT      R3 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L    0   291  FASTCALL1      R90, R3, R2
+  L    0   292  GETIMPORT      R2 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   294  CALL           R2, R2, R2
+  L    0   295  JUMPIF         R2, pc=309
+  L    1   296  GETIMPORT      R2 = import_cache(d=38) chain=import(const#1.const#37) aux=0x80109400
+  L    0   298  LOADNIL        R3
+  L    0   299  LOADNIL        R4
+  L    0   300  FORGPREP       R2, pc=307
+  L    1   301  GETIMPORT      R7 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L    0   303  JUMPIFNOTEQ    R6, R7, pc=307
+  L    1   305  LOADB          R1 = True
+  L    0   306  JUMP           pc=310
+  L   -2   307  FORGLOOP       R2, pc=301, aux=0x00000002
+  L    6   309  LOADB          R1 = False
+  L    0   310  JUMPIF         R1, pc=385
+  L  560   311  GETIMPORT      R2 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L    0   313  FASTCALL1      R90, R2, R2
+  L    0   314  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   316  CALL           R1, R2, R2
+  L    0   317  JUMPIF         R1, pc=382
+  L    1   318  GETIMPORT      R1 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L    0   320  GETIMPORT      R3 = import_cache(d=66) chain=import(const#65) aux=0x44100000
+  L    0   322  LOADB          R4 = False
+  L    0   323  NAMECALL       R1, R1, atom(7b7015c9)
+  L    0   325  CALL           R1, R4, R1
+  L    1   326  GETIMPORT      R2 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L    0   328  FASTCALL1      R90, R2, R2
+  L    0   329  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   331  CALL           R1, R2, R2
+  L    0   332  JUMPIF         R1, pc=382
+  L    1   333  GETIMPORT      R1 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L    0   335  NAMECALL       R1, R1, atom(be0bea4a)
+  L    0   337  CALL           R1, R2, R2
+  L    1   338  GETIMPORT      R2 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L    0   340  LOADB          R4 = True
+  L    0   341  LOADB          R5 = True
+  L    0   342  NAMECALL       R2, R2, atom(6ead47ac = SetVisibility)
+  L    0   344  CALL           R2, R4, R1
+  L    1   345  LOADN          R4 = 1
+  L    0   346  LENGTH         R2, R1
+  L    0   347  LOADN          R3 = 1
+  L    0   348  FORNPREP       R2, pc=356
+  L    1   349  GETTABLE       R5, R1, R4
+  L    0   350  LOADB          R7 = True
+  L    0   351  LOADB          R8 = True
+  L    0   352  NAMECALL       R5, R5, atom(6ead47ac = SetVisibility)
+  L    0   354  CALL           R5, R4, R1
+  L   -1   355  FORNLOOP       R2, pc=349
+  L    4   356  LOADN          R4 = 1
+  L    0   357  GETIMPORT      R5 = import_cache(d=71) chain=import(const#70) aux=0x44600000
+  L    0   359  LENGTH         R2, R5
+  L    0   360  LOADN          R3 = 1
+  L    0   361  FORNPREP       R2, pc=382
+  L    1   362  GETIMPORT      R5 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L    0   364  GETIMPORT      R8 = import_cache(d=71) chain=import(const#70) aux=0x44600000
+  L    0   366  GETTABLE       R7, R8, R4
+  L    0   367  NAMECALL       R5, R5, atom(2226b35c)
+  L    0   369  CALL           R5, R3, R2
+  L    1   370  LOADN          R8 = 1
+  L    0   371  LENGTH         R6, R5
+  L    0   372  LOADN          R7 = 1
+  L    0   373  FORNPREP       R6, pc=381
+  L    1   374  GETTABLE       R9, R5, R8
+  L    0   375  LOADB          R11 = False
+  L    0   376  LOADB          R12 = False
+  L    0   377  NAMECALL       R9, R9, atom(6ead47ac = SetVisibility)
+  L    0   379  CALL           R9, R4, R1
+  L   -1   380  FORNLOOP       R6, pc=374
+  L   -2   381  FORNLOOP       R2, pc=362
+  L    9   382  GETUPVAL       R1, R12
+  L    0   383  LOADB          R2 = True
+  L    0   384  CALL           R1, R2, R1
+  L    2   385  GETUPVAL       R2, R0
+  L    0   386  GETTABLEKS     R1, R2, atom(c09dcfb2 = TaggedFirePorts)
+  L    0   388  GETIMPORT      R2 = import_cache(d=73) chain=import(const#72) aux=0x44800000
+  L    0   390  LOADK          R3 = K[74] = str_ref(#19)
+  L    0   391  CALL           R1, R3, R1
+  L    1   392  GETUPVAL       R1, R13
+  L    0   393  CALL           R1, R1, R1
+  L    1   394  GETIMPORT      R2 = import_cache(d=76) chain=import(const#75) aux=0x44b00000
+  L    0   396  FASTCALL1      R90, R2, R2
+  L    0   397  GETIMPORT      R1 = import_cache(d=7) chain=import(const#6) aux=0x40600000
+  L    0   399  CALL           R1, R2, R2
+  L    0   400  JUMPIF         R1, pc=423
+  L    0   401  GETIMPORT      R1 = import_cache(d=76) chain=import(const#75) aux=0x44b00000
+  L    0   403  GETIMPORT      R2 = import_cache(d=49) chain=import(const#48) aux=0x43000000
+  L    0   405  LOADK          R3 = K[77] = str_ref(#43)
+  L    0   406  CALL           R2, R2, R2
+  L    0   407  JUMPIFEQ       R1, R2, pc=423
+  L    1   409  GETIMPORT      R1 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L    0   411  GETIMPORT      R3 = import_cache(d=76) chain=import(const#75) aux=0x44b00000
+  L    0   413  LOADB          R4 = True
+  L    0   414  NAMECALL       R1, R1, atom(8a035cd5)
+  L    0   416  CALL           R1, R4, R1
+  L    0   417  RETURN         R0, R1, R0
+  L    3   418  GETIMPORT      R1 = import_cache(d=9) chain=import(const#8) aux=0x40800000
+  L    0   420  LOADK          R2 = K[79] = str_ref(#44)
+  L    0   421  CALL           R1, R2, R1
+  L    1   422  RETURN         R0, R1, R0
+  L    2   423  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p16  stack=6 params=0 upvalues=5 varargs=0 flags=0 line=728
+  -- constants (35):
+  --   K[  0] atom           = atom(860b110e = vendorAncestorRes)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(7e8ad928)
+  --   K[  3] import         = import(const#2)
+  --   K[  4] atom           = atom(e93b649c = print)
+  --   K[  5] import         = import(const#4)
+  --   K[  6] string_ref     = str_ref(#39)
+  --   K[  7] atom           = atom(712cbb48 = GetLocalPlayerAncestorOfType)
+  --   K[  8] atom           = atom(09fb9646 = ancestorNPCInstance)
+  --   K[  9] import         = import(const#8)
+  --   K[ 10] atom           = atom(ae3ffccd = gRegion)
+  --   K[ 11] import         = import(const#10)
+  --   K[ 12] atom           = atom(f7b52061 = ancestorDecoTag)
+  --   K[ 13] import         = import(const#12)
+  --   K[ 14] atom           = atom(0a6a5887)
+  --   K[ 15] atom           = atom(d30cffc0)
+  --   K[ 16] atom           = atom(64c9fcb8 = vendorInteract)
+  --   K[ 17] import         = import(const#16)
+  --   K[ 18] atom           = atom(5f71328d = ShouldForceInteractDisable)
+  --   K[ 19] atom           = atom(de89c50a = WeakResource)
+  --   K[ 20] import         = import(const#19)
+  --   K[ 21] atom           = atom(c8f4d8f6 = Disable)
+  --   K[ 22] atom           = atom(6266f538 = Enable)
+  --   K[ 23] atom           = atom(75c6cac9 = lookAtRevealTrigger)
+  --   K[ 24] import         = import(const#23)
+  --   K[ 25] atom           = atom(8659e708 = Symbol)
+  --   K[ 26] import         = import(const#25)
+  --   K[ 27] string_ref     = str_ref(#6)
+  --   K[ 28] atom           = atom(9afba2d5 = GetPosition)
+  --   K[ 29] atom           = atom(f738b4af)
+  --   K[ 30] atom           = atom(c588f3cf = Destroy)
+  --   K[ 31] string_ref     = str_ref(#30)
+  --   K[ 32] number         = num(-1.0)
+  --   K[ 33] atom           = atom(6ead47ac = SetVisibility)
+  --   K[ 34] string_ref     = str_ref(#12)
+  L  729     0  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0     2  FASTCALL1      R90, R1, R2
+  L    0     3  GETIMPORT      R0 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0     5  CALL           R0, R2, R2
+  L    0     6  JUMPIFNOT      R0, pc=12
+  L    1     7  GETIMPORT      R0 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L    0     9  LOADK          R1 = K[6] = str_ref(#39)
+  L    0    10  CALL           R0, R2, R1
+  L    1    11  RETURN         R0, R1, R0
+  L    3    12  GETUPVAL       R1, R1
+  L    0    13  GETTABLEKS     R0, R1, atom(712cbb48 = GetLocalPlayerAncestorOfType)
+  L    0    15  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0    17  LOADB          R2 = True
+  L    0    18  CALL           R0, R3, R2
+  L    0    19  SETUPVAL       R0, R0
+  L    1    20  GETIMPORT      R0 = import_cache(d=9) chain=import(const#8) aux=0x40800000
+  L    0    22  SETUPVAL       R0, R2
+  L    2    23  GETUPVAL       R1, R2
+  L    0    24  FASTCALL1      R90, R1, R2
+  L    0    25  GETIMPORT      R0 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0    27  CALL           R0, R2, R2
+  L    0    28  JUMPIFNOT      R0, pc=37
+  L    1    29  GETIMPORT      R0 = import_cache(d=11) chain=import(const#10) aux=0x40a00000
+  L    0    31  GETIMPORT      R2 = import_cache(d=13) chain=import(const#12) aux=0x40c00000
+  L    0    33  NAMECALL       R0, R0, atom(0a6a5887)
+  L    0    35  CALL           R0, R3, R2
+  L    0    36  SETUPVAL       R0, R2
+  L    4    37  GETUPVAL       R1, R0
+  L    0    38  FASTCALL1      R90, R1, R2
+  L    0    39  GETIMPORT      R0 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0    41  CALL           R0, R2, R2
+  L    0    42  JUMPIFNOT      R0, pc=108
+  L    1    43  GETUPVAL       R0, R3
+  L    0    44  GETUPVAL       R1, R2
+  L    0    45  LOADN          R2 = 0
+  L    0    46  CALL           R0, R3, R1
+  L    2    47  GETUPVAL       R0, R2
+  L    0    48  NAMECALL       R0, R0, atom(d30cffc0)
+  L    0    50  CALL           R0, R2, R1
+  L    1    51  GETIMPORT      R0 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L -636    53  GETUPVAL       R2, R4
+  L    0    54  GETTABLEKS     R1, R2, atom(5f71328d = ShouldForceInteractDisable)
+  L    0    56  GETIMPORT      R2 = import_cache(d=20) chain=import(const#19) aux=0x41300000
+  L    0    58  GETIMPORT      R3 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0    60  CALL           R2, R2, R0
+  L    0    61  CALL           R1, R0, R2
+  L    0    62  JUMPIFNOT      R1, pc=67
+  L    1    63  NAMECALL       R1, R0, atom(c8f4d8f6 = Disable)
+  L    0    65  CALL           R1, R2, R1
+  L    1    66  JUMP           pc=70
+  L    2    67  NAMECALL       R1, R0, atom(6266f538 = Enable)
+  L    0    69  CALL           R1, R2, R1
+  L  633    70  GETIMPORT      R1 = import_cache(d=24) chain=import(const#23) aux=0x41700000
+  L    0    72  FASTCALL1      R90, R1, R2
+  L    0    73  GETIMPORT      R0 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0    75  CALL           R0, R2, R2
+  L    0    76  JUMPIF         R0, pc=107
+  L    1    77  GETIMPORT      R0 = import_cache(d=24) chain=import(const#23) aux=0x41700000
+  L    0    79  NAMECALL       R0, R0, atom(c8f4d8f6 = Disable)
+  L    0    81  CALL           R0, R2, R1
+  L    1    82  GETIMPORT      R0 = import_cache(d=11) chain=import(const#10) aux=0x40a00000
+  L    0    84  GETIMPORT      R2 = import_cache(d=26) chain=import(const#25) aux=0x41900000
+  L    0    86  LOADK          R3 = K[27] = str_ref(#6)
+  L    0    87  CALL           R2, R2, R2
+  L    0    88  GETIMPORT      R3 = import_cache(d=24) chain=import(const#23) aux=0x41700000
+  L    0    90  NAMECALL       R3, R3, atom(9afba2d5 = GetPosition)
+  L    0    92  CALL           R3, R2, R2
+  L    0    93  LOADN          R4 = 0
+  L    0    94  LOADN          R5 = 5
+  L    0    95  NAMECALL       R0, R0, atom(f738b4af)
+  L    0    97  CALL           R0, R6, R2
+  L    1    98  FASTCALL1      R90, R0, R3
+  L    0    99  MOVE           R2, R0
+  L    0   100  GETIMPORT      R1 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   102  CALL           R1, R2, R2
+  L    0   103  JUMPIF         R1, pc=107
+  L    1   104  NAMECALL       R1, R0, atom(c588f3cf = Destroy)
+  L    0   106  CALL           R1, R2, R1
+  L    3   107  RETURN         R0, R1, R0
+  L    1   108  GETUPVAL       R1, R0
+  L    0   109  FASTCALL1      R90, R1, R2
+  L    0   110  GETIMPORT      R0 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0   112  CALL           R0, R2, R2
+  L    0   113  JUMPIF         R0, pc=158
+  L    1   114  GETUPVAL       R1, R0
+  L    0   115  GETTABLEKS     R0, R1, str_ref(#30)
+  L    0   117  JUMPXEQKN      R0, pc=129, k=num(-1.0), not=True
+  L    1   119  GETUPVAL       R0, R2
+  L    0   120  LOADB          R2 = False
+  L    0   121  LOADB          R3 = False
+  L    0   122  NAMECALL       R0, R0, atom(6ead47ac = SetVisibility)
+  L    0   124  CALL           R0, R4, R1
+  L    1   125  GETGLOBAL      R0, str_ref(#12)
+  L    0   127  CALL           R0, R1, R1
+  L    0   128  RETURN         R0, R1, R0
+  L    1   129  GETUPVAL       R1, R0
+  L    0   130  GETTABLEKS     R0, R1, str_ref(#30)
+  L    0   132  LOADN          R1 = 0
+  L    0   133  JUMPIFNOTLE    R1, R0, pc=158
+  L    1   135  GETUPVAL       R0, R3
+  L    0   136  GETUPVAL       R1, R2
+  L    0   137  LOADN          R2 = 0
+  L    0   138  CALL           R0, R3, R1
+  L    3   139  GETIMPORT      R0 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L -653   141  GETUPVAL       R2, R4
+  L    0   142  GETTABLEKS     R1, R2, atom(5f71328d = ShouldForceInteractDisable)
+  L    0   144  GETIMPORT      R2 = import_cache(d=20) chain=import(const#19) aux=0x41300000
+  L    0   146  GETIMPORT      R3 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0   148  CALL           R2, R2, R0
+  L    0   149  CALL           R1, R0, R2
+  L    0   150  JUMPIFNOT      R1, pc=155
+  L    1   151  NAMECALL       R1, R0, atom(c8f4d8f6 = Disable)
+  L    0   153  CALL           R1, R2, R1
+  L    1   154  RETURN         R0, R1, R0
+  L    2   155  NAMECALL       R1, R0, atom(6266f538 = Enable)
+  L    0   157  CALL           R1, R2, R1
+  L  652   158  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p17  stack=8 params=2 upvalues=4 varargs=0 flags=0 line=768
+  -- constants (29):
+  --   K[  0] atom           = atom(860b110e = vendorAncestorRes)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(7e8ad928)
+  --   K[  3] import         = import(const#2)
+  --   K[  4] atom           = atom(712cbb48 = GetLocalPlayerAncestorOfType)
+  --   K[  5] atom           = atom(f0bf8ede = _T)
+  --   K[  6] string_ref     = str_ref(#16)
+  --   K[  7] import         = import(const#5.const#6)
+  --   K[  8] atom           = atom(09f3e2f4 = Sleep)
+  --   K[  9] import         = import(const#8)
+  --   K[ 10] atom           = atom(6266f538 = Enable)
+  --   K[ 11] atom           = atom(09fb9646 = ancestorNPCInstance)
+  --   K[ 12] import         = import(const#11)
+  --   K[ 13] import         = import(const#5)
+  --   K[ 14] atom           = atom(ae3ffccd = gRegion)
+  --   K[ 15] import         = import(const#14)
+  --   K[ 16] atom           = atom(8659e708 = Symbol)
+  --   K[ 17] import         = import(const#16)
+  --   K[ 18] string_ref     = str_ref(#6)
+  --   K[ 19] atom           = atom(9afba2d5 = GetPosition)
+  --   K[ 20] atom           = atom(f738b4af)
+  --   K[ 21] atom           = atom(c588f3cf = Destroy)
+  --   K[ 22] atom           = atom(61c1cfe2 = DissolveIn)
+  --   K[ 23] atom           = atom(64c9fcb8 = vendorInteract)
+  --   K[ 24] import         = import(const#23)
+  --   K[ 25] atom           = atom(5f71328d = ShouldForceInteractDisable)
+  --   K[ 26] atom           = atom(de89c50a = WeakResource)
+  --   K[ 27] import         = import(const#26)
+  --   K[ 28] atom           = atom(c8f4d8f6 = Disable)
+  L  769     0  GETIMPORT      R3 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0     2  FASTCALL1      R90, R3, R2
+  L    0     3  GETIMPORT      R2 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0     5  CALL           R2, R2, R2
+  L    0     6  JUMPIF         R2, pc=15
+  L    1     7  GETUPVAL       R3, R1
+  L    0     8  GETTABLEKS     R2, R3, atom(712cbb48 = GetLocalPlayerAncestorOfType)
+  L    0    10  GETIMPORT      R3 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0    12  LOADB          R4 = True
+  L    0    13  CALL           R2, R3, R2
+  L    0    14  SETUPVAL       R2, R0
+  L    2    15  GETIMPORT      R2 = import_cache(d=7) chain=import(const#5.const#6) aux=0x80501800
+  L    0    17  JUMPXEQKB      R2, pc=27, val=True, not=True
+  L    1    19  GETIMPORT      R2 = import_cache(d=9) chain=import(const#8) aux=0x40800000
+  L    0    21  LOADN          R3 = 4
+  L    0    22  CALL           R2, R2, R1
+  L    1    23  NAMECALL       R2, R1, atom(6266f538 = Enable)
+  L    0    25  CALL           R2, R2, R1
+  L    1    26  RETURN         R0, R1, R0
+  L    2    27  GETIMPORT      R2 = import_cache(d=12) chain=import(const#11) aux=0x40b00000
+  L    0    29  SETUPVAL       R2, R2
+  L    1    30  GETIMPORT      R2 = import_cache(d=13) chain=import(const#5) aux=0x40500000
+  L    0    32  LOADB          R3 = True
+  L    0    33  SETTABLEKS     R3, R2, str_ref(#16)
+  L    2    35  GETIMPORT      R2 = import_cache(d=15) chain=import(const#14) aux=0x40e00000
+  L    0    37  GETIMPORT      R4 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L    0    39  LOADK          R5 = K[18] = str_ref(#6)
+  L    0    40  CALL           R4, R2, R2
+  L    0    41  NAMECALL       R5, R1, atom(9afba2d5 = GetPosition)
+  L    0    43  CALL           R5, R2, R2
+  L    0    44  LOADN          R6 = 0
+  L    0    45  LOADN          R7 = 5
+  L    0    46  NAMECALL       R2, R2, atom(f738b4af)
+  L    0    48  CALL           R2, R6, R2
+  L    1    49  FASTCALL1      R90, R2, R3
+  L    0    50  MOVE           R4, R2
+  L    0    51  GETIMPORT      R3 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L    0    53  CALL           R3, R2, R2
+  L    0    54  JUMPIF         R3, pc=58
+  L    1    55  NAMECALL       R3, R2, atom(c588f3cf = Destroy)
+  L    0    57  CALL           R3, R2, R1
+  L    4    58  GETUPVAL       R4, R1
+  L    0    59  GETTABLEKS     R3, R4, atom(61c1cfe2 = DissolveIn)
+  L    0    61  GETUPVAL       R4, R2
+  L    0    62  CALL           R3, R2, R1
+  L    1    63  GETIMPORT      R3 = import_cache(d=9) chain=import(const#8) aux=0x40800000
+  L    0    65  LOADN          R4 = 2
+  L    0    66  CALL           R3, R2, R1
+  L    1    67  GETIMPORT      R3 = import_cache(d=24) chain=import(const#23) aux=0x41700000
+  L -678    69  GETUPVAL       R5, R3
+  L    0    70  GETTABLEKS     R4, R5, atom(5f71328d = ShouldForceInteractDisable)
+  L    0    72  GETIMPORT      R5 = import_cache(d=27) chain=import(const#26) aux=0x41a00000
+  L    0    74  GETIMPORT      R6 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    0    76  CALL           R5, R2, R0
+  L    0    77  CALL           R4, R0, R2
+  L    0    78  JUMPIFNOT      R4, pc=83
+  L    1    79  NAMECALL       R4, R3, atom(c8f4d8f6 = Disable)
+  L    0    81  CALL           R4, R2, R1
+  L    1    82  JUMP           pc=86
+  L    2    83  NAMECALL       R4, R3, atom(6266f538 = Enable)
+  L    0    85  CALL           R4, R2, R1
+  L  675    86  GETIMPORT      R3 = import_cache(d=13) chain=import(const#5) aux=0x40500000
+  L    0    88  LOADB          R4 = False
+  L    0    89  SETTABLEKS     R4, R3, str_ref(#16)
+  L    2    91  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p18  stack=2 params=0 upvalues=1 varargs=0 flags=0 line=793
+  L  794     0  GETUPVAL       R0, R0
+  L  794     1  LOADB          R1 = True
+  L  794     2  CALL           R0, R2, R1
+  L  795     3  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p19  stack=1 params=1 upvalues=0 varargs=0 flags=0 line=797
+  L  798     0  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p20  stack=8 params=1 upvalues=0 varargs=0 flags=0 line=800
+  -- constants (6):
+  --   K[  0] atom           = atom(12445b2b = pickupSeedActions)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(7e8ad928)
+  --   K[  3] import         = import(const#2)
+  --   K[  4] atom           = atom(6266f538 = Enable)
+  --   K[  5] atom           = atom(c8f4d8f6 = Disable)
+  L  801     0  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  801     2  LOADNIL        R2
+  L  801     3  LOADNIL        R3
+  L  801     4  FORGPREP       R1, pc=19
+  L  802     5  FASTCALL1      R90, R5, R3
+  L  801     6  MOVE           R7, R5
+  L  801     7  GETIMPORT      R6 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L  801     9  CALL           R6, R2, R2
+  L  801    10  JUMPIF         R6, pc=19
+  L  802    11  JUMPIFNOT      R0, pc=16
+  L  802    12  NAMECALL       R6, R5, atom(6266f538 = Enable)
+  L  801    14  CALL           R6, R2, R1
+  L  801    15  JUMP           pc=19
+  L  803    16  NAMECALL       R6, R5, atom(c8f4d8f6 = Disable)
+  L  801    18  CALL           R6, R2, R1
+  L 1052    19  FORGLOOP       R1, pc=5, aux=0x00000002
+  L  810    21  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p21  stack=14 params=0 upvalues=2 varargs=0 flags=0 line=812
+  -- constants (26):
+  --   K[  0] atom           = atom(26334b20 = gGameData)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(6a31e3af = GetInventory)
+  --   K[  3] atom           = atom(7e8ad928)
+  --   K[  4] import         = import(const#3)
+  --   K[  5] atom           = atom(b4ed68de = _G)
+  --   K[  6] import         = import(const#5)
+  --   K[  7] string_ref     = str_ref(#45)
+  --   K[  8] atom           = atom(09f3e2f4 = Sleep)
+  --   K[  9] import         = import(const#8)
+  --   K[ 10] atom           = atom(6b29f1ed)
+  --   K[ 11] atom           = atom(07f0ada8 = ipairs)
+  --   K[ 12] import         = import(const#11)
+  --   K[ 13] string_ref     = str_ref(#34)
+  --   K[ 14] atom           = atom(4c34a78d = seedItemType)
+  --   K[ 15] import         = import(const#14)
+  --   K[ 16] atom           = atom(f0c536fb = Engine)
+  --   K[ 17] atom           = atom(db2b0cee)
+  --   K[ 18] import         = import(const#16.const#17)
+  --   K[ 19] string_ref     = str_ref(#35)
+  --   K[ 20] atom           = atom(f1a88c30)
+  --   K[ 21] atom           = atom(c92787ff = GetSecondElements)
+  --   K[ 22] string_ref     = str_ref(#46)
+  --   K[ 23] atom           = atom(62688c25 = seedDeco)
+  --   K[ 24] import         = import(const#23)
+  --   K[ 25] atom           = atom(6ead47ac = SetVisibility)
+  L  813     0  GETIMPORT      R0 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  813     2  NAMECALL       R0, R0, atom(6a31e3af = GetInventory)
+  L  813     4  CALL           R0, R2, R2
+  L  814     5  FASTCALL1      R90, R0, R3
+  L  813     6  MOVE           R2, R0
+  L  813     7  GETIMPORT      R1 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  813     9  CALL           R1, R2, R2
+  L  813    10  JUMPIFNOT      R1, pc=12
+  L  814    11  RETURN         R0, R1, R0
+  L  817    12  GETIMPORT      R3 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  813    14  GETTABLEKS     R2, R3, str_ref(#45)
+  L  813    16  FASTCALL1      R90, R2, R2
+  L  813    17  GETIMPORT      R1 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  813    19  CALL           R1, R2, R2
+  L  813    20  JUMPIF         R1, pc=27
+  L  813    21  GETIMPORT      R2 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  813    23  GETTABLEKS     R1, R2, str_ref(#45)
+  L  813    25  JUMPXEQKB      R1, pc=32, val=False, not=True
+  L  814    27  GETIMPORT      R1 = import_cache(d=9) chain=import(const#8) aux=0x40800000
+  L  813    29  LOADN          R2 = 0
+  L  813    30  CALL           R1, R2, R1
+  L 1068    31  JUMPBACK       pc=12
+  L  817    32  NAMECALL       R1, R0, atom(6b29f1ed)
+  L  813    34  CALL           R1, R2, R2
+  L  814    35  LOADB          R2 = True
+  L  815    36  GETIMPORT      R3 = import_cache(d=12) chain=import(const#11) aux=0x40b00000
+  L  813    38  MOVE           R4, R1
+  L  813    39  CALL           R3, R2, R4
+  L  813    40  FORGPREP_INEXT R3, pc=75
+  L  814    41  GETTABLEKS     R8, R7, str_ref(#34)
+  L  813    43  GETIMPORT      R9 = import_cache(d=15) chain=import(const#14) aux=0x40e00000
+  L  813    45  JUMPIFNOTEQ    R8, R9, pc=75
+  L  814    47  GETIMPORT      R8 = import_cache(d=18) chain=import(const#16.const#17) aux=0x81004400
+  L  813    49  GETTABLEKS     R9, R7, str_ref(#35)
+  L  813    51  NAMECALL       R9, R9, atom(f1a88c30)
+  L  813    53  CALL           R9, R2, R0
+  L  813    54  CALL           R8, R0, R2
+  L  814    55  GETUPVAL       R10, R0
+  L  813    56  GETTABLEKS     R9, R10, atom(c92787ff = GetSecondElements)
+  L  813    58  MINUS          R10, R8
+  L  813    59  CALL           R9, R2, R3
+  L  814    60  LOADN          R12 = 12
+  L  813    61  JUMPIFLE       R12, R10, pc=67
+  L  813    63  LOADB          R11 = False
+  L  813    64  LOADN          R12 = 1
+  L  813    65  JUMPIFNOTLE    R12, R9, pc=73
+  L  813    67  LOADN          R13 = 0
+  L  813    68  JUMPIFLT       R13, R8, pc=71
+  L  813    70  LOADB          R12 = False  +1
+  L  813    71  LOADB          R12 = True
+  L  813    72  NOT            R11, R12
+  L  813    73  MOVE           R2, R11
+  L  814    74  JUMP           pc=77
+  L 1064    75  FORGLOOP       R3, pc=41, aux=0x80000002
+  L  822    77  GETIMPORT      R4 = import_cache(d=6) chain=import(const#5) aux=0x40500000
+  L  813    79  GETTABLEKS     R3, R4, str_ref(#46)
+  L  817    81  GETUPVAL       R3, R1
+  L  813    82  MOVE           R4, R2
+  L  813    83  CALL           R3, R2, R1
+  L  815    84  GETIMPORT      R4 = import_cache(d=24) chain=import(const#23) aux=0x41700000
+  L  813    86  FASTCALL1      R90, R4, R2
+  L  813    87  GETIMPORT      R3 = import_cache(d=4) chain=import(const#3) aux=0x40300000
+  L  813    89  CALL           R3, R2, R2
+  L  813    90  JUMPIF         R3, pc=97
+  L  814    91  GETIMPORT      R3 = import_cache(d=24) chain=import(const#23) aux=0x41700000
+  L  813    93  MOVE           R5, R2
+  L  813    94  NAMECALL       R3, R3, atom(6ead47ac = SetVisibility)
+  L  813    96  CALL           R3, R3, R1
+  L  815    97  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p22  stack=15 params=2 upvalues=1 varargs=0 flags=0 line=846
+  -- constants (47):
+  --   K[  0] atom           = atom(62688c25 = seedDeco)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] atom           = atom(7e8ad928)
+  --   K[  3] import         = import(const#2)
+  --   K[  4] atom           = atom(ae3ffccd = gRegion)
+  --   K[  5] import         = import(const#4)
+  --   K[  6] atom           = atom(c4f78a8f)
+  --   K[  7] atom           = atom(31333354 = IsKilled)
+  --   K[  8] atom           = atom(d2b2176d)
+  --   K[  9] atom           = atom(51df0d6b = Unequip)
+  --   K[ 10] atom           = atom(acb7f9fa = pickupSeedInputFilter)
+  --   K[ 11] import         = import(const#10)
+  --   K[ 12] atom           = atom(aeb02c14)
+  --   K[ 13] atom           = atom(e42129ec = pickupSeedAnim)
+  --   K[ 14] import         = import(const#13)
+  --   K[ 15] atom           = atom(921c1a5f)
+  --   K[ 16] atom           = atom(8659e708 = Symbol)
+  --   K[ 17] import         = import(const#16)
+  --   K[ 18] string_ref     = str_ref(#47)
+  --   K[ 19] atom           = atom(091354f5)
+  --   K[ 20] atom           = atom(09f3e2f4 = Sleep)
+  --   K[ 21] import         = import(const#20)
+  --   K[ 22] atom           = atom(5784a397)
+  --   K[ 23] import         = import(const#22)
+  --   K[ 24] atom           = atom(e465b547 = minSeedsToGive)
+  --   K[ 25] import         = import(const#24)
+  --   K[ 26] atom           = atom(d0f859c8 = maxSeedsToGive)
+  --   K[ 27] import         = import(const#26)
+  --   K[ 28] atom           = atom(4c34a78d = seedItemType)
+  --   K[ 29] import         = import(const#28)
+  --   K[ 30] atom           = atom(9f7c0a5f = GiveItem)
+  --   K[ 31] atom           = atom(26334b20 = gGameData)
+  --   K[ 32] import         = import(const#31)
+  --   K[ 33] atom           = atom(a4299765)
+  --   K[ 34] atom           = atom(6b29f1ed)
+  --   K[ 35] atom           = atom(07f0ada8 = ipairs)
+  --   K[ 36] import         = import(const#35)
+  --   K[ 37] string_ref     = str_ref(#34)
+  --   K[ 38] atom           = atom(a6b3ae2b)
+  --   K[ 39] atom           = atom(b62d700d = gGameRules)
+  --   K[ 40] import         = import(const#39)
+  --   K[ 41] atom           = atom(d841a087 = CommitInventoryCheckpointToDB)
+  --   K[ 42] atom           = atom(6ead47ac = SetVisibility)
+  --   K[ 43] atom           = atom(cf966a74)
+  --   K[ 44] atom           = atom(b4ed68de = _G)
+  --   K[ 45] import         = import(const#44)
+  --   K[ 46] string_ref     = str_ref(#46)
+  L  847     0  GETIMPORT      R3 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  847     2  FASTCALL1      R90, R3, R2
+  L  847     3  GETIMPORT      R2 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L  847     5  CALL           R2, R2, R2
+  L  847     6  JUMPIFNOT      R2, pc=8
+  L  848     7  RETURN         R0, R1, R0
+  L  849     8  GETIMPORT      R2 = import_cache(d=5) chain=import(const#4) aux=0x40400000
+  L  847    10  NAMECALL       R2, R2, atom(c4f78a8f)
+  L  847    12  CALL           R2, R2, R2
+  L  847    13  JUMPIFEQ       R1, R2, pc=16
+  L  848    15  RETURN         R0, R1, R0
+  L  849    16  FASTCALL1      R90, R1, R3
+  L  847    17  MOVE           R3, R1
+  L  847    18  GETIMPORT      R2 = import_cache(d=3) chain=import(const#2) aux=0x40200000
+  L  847    20  CALL           R2, R2, R2
+  L  847    21  JUMPIF         R2, pc=26
+  L  847    22  NAMECALL       R2, R1, atom(31333354 = IsKilled)
+  L  847    24  CALL           R2, R2, R2
+  L  847    25  JUMPIFNOT      R2, pc=27
+  L  848    26  RETURN         R0, R1, R0
+  L  850    27  GETUPVAL       R2, R0
+  L  847    28  LOADB          R3 = False
+  L  847    29  CALL           R2, R2, R1
+  L  849    30  NAMECALL       R2, R1, atom(d2b2176d)
+  L  847    32  CALL           R2, R2, R2
+  L  848    33  LOADN          R5 = 0
+  L  847    34  LOADN          R6 = 0
+  L  847    35  NAMECALL       R3, R2, atom(51df0d6b = Unequip)
+  L  847    37  CALL           R3, R4, R1
+  L  848    38  GETIMPORT      R5 = import_cache(d=11) chain=import(const#10) aux=0x40a00000
+  L  847    40  NAMECALL       R3, R1, atom(aeb02c14)
+  L  847    42  CALL           R3, R3, R1
+  L  849    43  GETIMPORT      R5 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L  847    45  LOADB          R6 = False
+  L  847    46  LOADN          R7 = 2
+  L  847    47  LOADN          R8 = 1
+  L  847    48  LOADB          R9 = True
+  L  847    49  NAMECALL       R3, R1, atom(921c1a5f)
+  L  847    51  CALL           R3, R7, R2
+  L  848    52  GETIMPORT      R5 = import_cache(d=14) chain=import(const#13) aux=0x40d00000
+  L  847    54  GETIMPORT      R7 = import_cache(d=17) chain=import(const#16) aux=0x41000000
+  L  847    56  LOADK          R8 = K[18] = str_ref(#47)
+  L  847    57  CALL           R7, R2, R0
+  L  847    58  NAMECALL       R5, R5, atom(091354f5)
+  L  847    60  CALL           R5, R0, R2
+  L  847    61  MUL            R4, R5, R3
+  L  848    62  GETIMPORT      R5 = import_cache(d=21) chain=import(const#20) aux=0x41400000
+  L  847    64  MOVE           R6, R4
+  L  847    65  CALL           R5, R2, R1
+  L  849    66  GETIMPORT      R5 = import_cache(d=23) chain=import(const#22) aux=0x41600000
+  L  847    68  GETIMPORT      R6 = import_cache(d=25) chain=import(const#24) aux=0x41800000
+  L  847    70  GETIMPORT      R7 = import_cache(d=27) chain=import(const#26) aux=0x41a00000
+  L  847    72  CALL           R5, R3, R2
+  L  848    73  LOADN          R8 = 1
+  L  847    74  MOVE           R6, R5
+  L  847    75  LOADN          R7 = 1
+  L  847    76  FORNPREP       R6, pc=84
+  L  848    77  GETIMPORT      R11 = import_cache(d=29) chain=import(const#28) aux=0x41c00000
+  L  847    79  LOADB          R12 = True
+  L  847    80  NAMECALL       R9, R1, atom(9f7c0a5f = GiveItem)
+  L  847    82  CALL           R9, R4, R1
+  L 1102    83  FORNLOOP       R6, pc=77
+  L  851    84  GETIMPORT      R6 = import_cache(d=32) chain=import(const#31) aux=0x41f00000
+  L  847    86  NAMECALL       R6, R6, atom(a4299765)
+  L  847    88  CALL           R6, R2, R2
+  L  847    89  JUMPIFNOT      R6, pc=121
+  L  848    90  GETIMPORT      R6 = import_cache(d=32) chain=import(const#31) aux=0x41f00000
+  L  847    92  NAMECALL       R6, R6, atom(a4299765)
+  L  847    94  CALL           R6, R2, R2
+  L  847    95  NAMECALL       R6, R6, atom(6b29f1ed)
+  L  847    97  CALL           R6, R2, R2
+  L  848    98  LOADB          R7 = False
+  L  848    99  GETIMPORT      R8 = import_cache(d=36) chain=import(const#35) aux=0x42300000
+  L  847   101  MOVE           R9, R6
+  L  847   102  CALL           R8, R2, R4
+  L  847   103  FORGPREP_INEXT R8, pc=111
+  L  848   104  GETTABLEKS     R13, R12, str_ref(#34)
+  L  847   106  GETIMPORT      R14 = import_cache(d=29) chain=import(const#28) aux=0x41c00000
+  L  847   108  JUMPIFNOTEQ    R13, R14, pc=111
+  L  848   110  LOADB          R7 = True
+  L 1101   111  FORGLOOP       R8, pc=104, aux=0x80000002
+  L  853   113  JUMPIF         R7, pc=121
+  L  848   114  GETIMPORT      R8 = import_cache(d=32) chain=import(const#31) aux=0x41f00000
+  L  847   116  GETIMPORT      R10 = import_cache(d=29) chain=import(const#28) aux=0x41c00000
+  L  847   118  NAMECALL       R8, R8, atom(a6b3ae2b)
+  L  847   120  CALL           R8, R3, R1
+  L  851   121  GETIMPORT      R6 = import_cache(d=40) chain=import(const#39) aux=0x42700000
+  L  847   123  LOADN          R8 = 0
+  L  847   124  LOADN          R9 = 0
+  L  847   125  NAMECALL       R6, R6, atom(d841a087 = CommitInventoryCheckpointToDB)
+  L  847   127  CALL           R6, R4, R1
+  L  849   128  GETIMPORT      R6 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L  847   130  LOADB          R8 = False
+  L  847   131  NAMECALL       R6, R6, atom(6ead47ac = SetVisibility)
+  L  847   133  CALL           R6, R3, R1
+  L  849   134  GETIMPORT      R6 = import_cache(d=21) chain=import(const#20) aux=0x41400000
+  L  847   136  SUB            R7, R3, R4
+  L  847   137  CALL           R6, R2, R1
+  L  848   138  GETIMPORT      R8 = import_cache(d=11) chain=import(const#10) aux=0x40a00000
+  L  847   140  NAMECALL       R6, R1, atom(cf966a74)
+  L  847   142  CALL           R6, R3, R1
+  L  850   143  GETIMPORT      R7 = import_cache(d=45) chain=import(const#44) aux=0x42c00000
+  L  847   145  GETTABLEKS     R6, R7, str_ref(#46)
+  L  851   147  RETURN         R0, R1, R0
+end
+
+-- ============================================================
+function p23  stack=32 params=0 upvalues=0 varargs=1 flags=2 line=1
+  -- children: p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22
+  -- constants (42):
+  --   K[  0] atom           = atom(c7a3c7b1 = require)
+  --   K[  1] import         = import(const#0)
+  --   K[  2] string_ref     = str_ref(#48)
+  --   K[  3] string_ref     = str_ref(#49)
+  --   K[  4] string_ref     = str_ref(#50)
+  --   K[  5] string_ref     = str_ref(#51)
+  --   K[  6] string_ref     = str_ref(#52)
+  --   K[  7] string_ref     = str_ref(#53)
+  --   K[  8] string_ref     = str_ref(#54)
+  --   K[  9] string_ref     = str_ref(#55)
+  --   K[ 10] string_ref     = str_ref(#56)
+  --   K[ 11] atom           = atom(8659e708 = Symbol)
+  --   K[ 12] import         = import(const#11)
+  --   K[ 13] string_ref     = str_ref(#57)
+  --   K[ 14] atom           = atom(026062d3 = Resource)
+  --   K[ 15] import         = import(const#14)
+  --   K[ 16] closure        = closure(proto#0)
+  --   K[ 17] closure        = closure(proto#2)
+  --   K[ 18] closure        = closure(proto#3)
+  --   K[ 19] closure        = closure(proto#4)
+  --   K[ 20] string_ref     = str_ref(#41)
+  --   K[ 21] closure        = closure(proto#6)
+  --   K[ 22] string_ref     = str_ref(#12)
+  --   K[ 23] closure        = closure(proto#9)
+  --   K[ 24] string_ref     = str_ref(#38)
+  --   K[ 25] closure        = closure(proto#12)
+  --   K[ 26] string_ref     = str_ref(#58)
+  --   K[ 27] closure        = closure(proto#13)
+  --   K[ 28] string_ref     = str_ref(#40)
+  --   K[ 29] string_ref     = str_ref(#59)
+  --   K[ 30] string_ref     = str_ref(#60)
+  --   K[ 31] string_ref     = str_ref(#61)
+  --   K[ 32] string_ref     = str_ref(#62)
+  --   K[ 33] closure        = closure(proto#18)
+  --   K[ 34] string_ref     = str_ref(#63)
+  --   K[ 35] closure        = closure(proto#19)
+  --   K[ 36] string_ref     = str_ref(#37)
+  --   K[ 37] closure        = closure(proto#20)
+  --   K[ 38] closure        = closure(proto#21)
+  --   K[ 39] string_ref     = str_ref(#64)
+  --   K[ 40] closure        = closure(proto#22)
+  --   K[ 41] string_ref     = str_ref(#65)
+  L    1     0  PREPVARARGS    R0
+  L    2     1  GETIMPORT      R0 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    1     3  LOADK          R1 = K[2] = str_ref(#48)
+  L    1     4  CALL           R0, R2, R2
+  L    2     5  GETIMPORT      R1 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    1     7  LOADK          R2 = K[3] = str_ref(#49)
+  L    1     8  CALL           R1, R2, R2
+  L    2     9  GETIMPORT      R2 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    1    11  LOADK          R3 = K[4] = str_ref(#50)
+  L    1    12  CALL           R2, R2, R2
+  L    2    13  GETIMPORT      R3 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    1    15  LOADK          R4 = K[5] = str_ref(#51)
+  L  256    16  CALL           R3, R2, R2
+  L    5    17  GETIMPORT      R4 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    4    19  LOADK          R5 = K[6] = str_ref(#52)
+  L    4    20  CALL           R4, R2, R2
+  L    5    21  GETIMPORT      R5 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    4    23  LOADK          R6 = K[7] = str_ref(#53)
+  L    4    24  CALL           R5, R2, R2
+  L    5    25  GETIMPORT      R6 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    4    27  LOADK          R7 = K[8] = str_ref(#54)
+  L    4    28  CALL           R6, R2, R2
+  L    5    29  GETIMPORT      R7 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    4    31  LOADK          R8 = K[9] = str_ref(#55)
+  L  256    32  CALL           R7, R2, R2
+  L    5    33  GETIMPORT      R8 = import_cache(d=1) chain=import(const#0) aux=0x40000000
+  L    4    35  LOADK          R9 = K[10] = str_ref(#56)
+  L    4    36  CALL           R8, R2, R2
+  L   53    37  LOADNIL        R9
+  L   32    38  GETIMPORT      R10 = import_cache(d=12) chain=import(const#11) aux=0x40b00000
+  L    4    40  LOADK          R11 = K[13] = str_ref(#57)
+  L    4    41  CALL           R10, R2, R2
+  L    8    42  NEWTABLE       R11, arraysz_hint=0, hashsz_log2=0, aux=0
+  L    5    44  NEWTABLE       R12, arraysz_hint=0, hashsz_log2=0, aux=0
+  L    5    46  NEWTABLE       R13, arraysz_hint=0, hashsz_log2=0, aux=0
+  L  257    48  LOADNIL        R14
+  L   86    49  NEWTABLE       R15, arraysz_hint=0, hashsz_log2=0, aux=0
+  L   86    51  GETIMPORT      R16 = import_cache(d=15) chain=import(const#14) aux=0x40e00000
+  L   85    53  CALL           R16, R1, R2
+  L   87    54  LOADNIL        R17
+  L   86    55  LOADNIL        R18
+  L   86    56  LOADNIL        R19
+  L   90    57  NEWTABLE       R20, arraysz_hint=0, hashsz_log2=0, aux=0
+  L   89    59  DUPCLOSURE     R21, #16
+  L   85    60  CAPTURE        
+  L   93    61  NEWCLOSURE     R22, #1
+  L   85    62  CAPTURE        
+  L   85    63  CAPTURE        
+  L  267    64  DUPCLOSURE     R23, #17
+  L   45    65  DUPCLOSURE     R24, #18
+  L   51    66  DUPCLOSURE     R25, #19
+  L   34    67  CAPTURE        
+  L   41    68  NEWCLOSURE     R26, #5
+  L   34    69  CAPTURE        
+  L   34    70  CAPTURE        
+  L   34    71  CAPTURE        
+  L   34    72  CAPTURE        
+  L   34    73  CAPTURE        
+  L   34    74  CAPTURE        
+  L   34    75  SETGLOBAL      R26, str_ref(#41)
+  L   74    77  DUPCLOSURE     R26, #21
+  L   34    78  CAPTURE        
+  L   34    79  CAPTURE        
+  L  256    80  SETGLOBAL      R26, str_ref(#12)
+  L   96    82  NEWCLOSURE     R26, #7
+  L   75    83  CAPTURE        
+  L   75    84  CAPTURE        
+  L   75    85  CAPTURE        
+  L   75    86  CAPTURE        
+  L   75    87  CAPTURE        
+  L   75    88  CAPTURE        
+  L  133    89  NEWCLOSURE     R27, #8
+  L   75    90  CAPTURE        
+  L   92    91  DUPCLOSURE     R28, #23
+  L   85    92  NEWCLOSURE     R29, #10
+  L   75    93  CAPTURE        
+  L   75    94  CAPTURE        
+  L   75    95  CAPTURE        
+  L  256    96  CAPTURE        
+  L  106    97  CAPTURE        
+  L  106    98  CAPTURE        
+  L  106    99  CAPTURE        
+  L  106   100  CAPTURE        
+  L  106   101  CAPTURE        
+  L  106   102  CAPTURE        
+  L  106   103  CAPTURE        
+  L  106   104  CAPTURE        
+  L  106   105  CAPTURE        
+  L  106   106  CAPTURE        
+  L  106   107  CAPTURE        
+  L  106   108  CAPTURE        
+  L  106   109  SETGLOBAL      R29, str_ref(#38)
+  L  303   111  NEWCLOSURE     R29, #11
+  L  256   112  CAPTURE        
+  L  197   113  CAPTURE        
+  L  197   114  CAPTURE        
+  L  197   115  CAPTURE        
+  L  197   116  CAPTURE        
+  L  197   117  CAPTURE        
+  L  197   118  CAPTURE        
+  L  197   119  CAPTURE        
+  L  240   120  DUPCLOSURE     R30, #25
+  L  197   121  CAPTURE        
+  L  197   122  SETGLOBAL      R30, str_ref(#58)
+  L  229   124  DUPCLOSURE     R30, #27
+  L  197   125  CAPTURE        
+  L  197   126  CAPTURE        
+  L  197   127  CAPTURE        
+  L  256   128  SETGLOBAL      R30, str_ref(#40)
+  L   94   130  NEWCLOSURE     R30, #14
+  L   75   131  CAPTURE        
+  L   75   132  CAPTURE        
+  L   75   133  CAPTURE        
+  L   75   134  SETGLOBAL      R30, str_ref(#59)
+  L   93   136  NEWCLOSURE     R30, #15
+  L   75   137  CAPTURE        
+  L   75   138  CAPTURE        
+  L   75   139  CAPTURE        
+  L   75   140  CAPTURE        
+  L   75   141  CAPTURE        
+  L   75   142  CAPTURE        
+  L   75   143  CAPTURE        
+  L  256   144  CAPTURE        
+  L   37   145  CAPTURE        
+  L   37   146  CAPTURE        
+  L   37   147  CAPTURE        
+  L   37   148  CAPTURE        
+  L   37   149  CAPTURE        
+  L   37   150  CAPTURE        
+  L   37   151  SETGLOBAL      R30, str_ref(#60)
+  L  147   153  NEWCLOSURE     R30, #16
+  L   37   154  CAPTURE        
+  L   37   155  CAPTURE        
+  L   37   156  CAPTURE        
+  L   37   157  CAPTURE        
+  L   37   158  CAPTURE        
+  L   37   159  SETGLOBAL      R30, str_ref(#61)
+  L  150   161  NEWCLOSURE     R30, #17
+  L  110   162  CAPTURE        
+  L  110   163  CAPTURE        
+  L  110   164  CAPTURE        
+  L  110   165  CAPTURE        
+  L  110   166  SETGLOBAL      R30, str_ref(#62)
+  L  135   168  DUPCLOSURE     R30, #33
+  L  110   169  CAPTURE        
+  L  110   170  SETGLOBAL      R30, str_ref(#63)
+  L  114   172  DUPCLOSURE     R30, #35
+  L  110   173  SETGLOBAL      R30, str_ref(#37)
+  L  113   175  DUPCLOSURE     R30, #37
+  L  268   176  DUPCLOSURE     R31, #38
+  L   84   177  CAPTURE        
+  L   84   178  CAPTURE        
+  L   84   179  SETGLOBAL      R31, str_ref(#64)
+  L  118   181  DUPCLOSURE     R31, #40
+  L   84   182  CAPTURE        
+  L   84   183  SETGLOBAL      R31, str_ref(#65)
+  L  137   185  CLOSEUPVALS    R9, R0
+  L   84   186  RETURN         R0, R1, R0
+end
